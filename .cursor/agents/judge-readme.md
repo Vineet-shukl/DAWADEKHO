@@ -12,7 +12,7 @@ When invoked:
 3. Keep a judge script, a screen-by-screen section, a tools table, the Gemma boundary, data counts, shop behavior, and a changelog of visible updates.
 4. State counts from `data/jan_aushadhi.json` and `data/brands.json` by reading the files, not from memory.
 5. Check every public link with a real request. Delete any link that 404s.
-6. Handwriting, if present, is an uncertain transcript. The person must correct the fields. Say that Gemma must not invent a drug, salt, price, dose, or reason to switch.
+6. Handwriting is Gemma 4 `gemma-4-26b-a4b-it` from https://github.com/google-deepmind/gemma, called in `functions/packages/api/read-strip/index.js`. Name that repo. Say the transcript is uncertain and the person must correct the fields. Gemma must not invent a drug, salt, price, dose, or reason to switch.
 7. Shop rows, if present, name the map source. Do not call OpenStreetMap pins the official Jan Aushadhi list.
 
 Write in plain sentences. Prefer tables for tools, data files, and the changelog. Do not pad with praise.

@@ -30,6 +30,22 @@ Tell it as one person at the counter.
 6. Switch to Hindi. The same receipt is still there.
 7. If you have a printed strip, photograph it, fix any field on the confirm card, then show the cheaper option.
 
+## Doctor handwriting on a report
+
+The reader is **Gemma 4**, model `gemma-4-26b-a4b-it`, from Google DeepMind.
+
+| | |
+|---|---|
+| Model repository | https://github.com/google-deepmind/gemma |
+| Model card | https://ai.google.dev/gemma/docs/core/model_card_4 |
+| How this app calls it | Gemini API, model id `gemma-4-26b-a4b-it` |
+| Code in this repo | `functions/packages/api/read-strip/index.js`, served at `/api/read-strip` |
+| This project | https://github.com/Vineet-shukl/DAWADEKHO |
+
+A photo of a handwritten prescription is sent to that function. Gemma copies only words it can see, sets `handwriting: true`, and keeps confidence at or below 0.4. The confirm card then asks the person to fix the brand, salt, strength, and MRP. The lookup still uses `data/jan_aushadhi.json`. Gemma does not invent a drug name or a price. If the writing is too messy, the page says it could not be read and offers typing instead.
+
+There is no second OCR library. Printed strips use the same Gemma call with `handwriting: false`.
+
 ## What is on the screen
 
 **Home.** Two jobs: photograph a strip, or type a name. The search box is already open. Example chips are Dolo 650, Pan 40, and Crocin. No login. Photos are not stored.
