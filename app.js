@@ -335,6 +335,8 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   $('receipt-source').textContent = t('result.source', { date: CONFIG.DATA_SNAPSHOT });
   $('kendra-link').href = CONFIG.KENDRA_URL;
   $('sugam-link').href = CONFIG.SUGAM_URL;
+  const official = $('store-official');
+  if (official) official.href = CONFIG.KENDRA_URL;
   $('receipt').hidden = false;
   $('receipt').setAttribute('aria-label', t('a11y.resultReady'));
   setMascot('happy');
@@ -632,6 +634,31 @@ async function init() {
     hideResults();
     input.value = '';
     showSearch();
+  });
+  $('store-official') && ($('store-official').href = CONFIG.KENDRA_URL);
+  $('store-map')?.addEventListener('click', () => {
+    const status = $('store-status');
+    const openMaps = (lat, lng) => {
+      const q = 'Jan Aushadhi Kendra';
+      const url = lat != null
+        ? `https://www.google.com/maps/search/${encodeURIComponent(q)}/@${lat},${lng},14z`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+      window.open(url, '_blank', 'noopener');
+      if (status) status.textContent = t('store.note');
+    };
+    if (!navigator.geolocation) {
+      openMaps();
+      return;
+    }
+    if (status) status.textContent = t('store.locating');
+    navigator.geolocation.getCurrentPosition(
+      (pos) => openMaps(pos.coords.latitude.toFixed(5), pos.coords.longitude.toFixed(5)),
+      () => {
+        if (status) status.textContent = t('store.denied');
+        openMaps();
+      },
+      { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 }
+    );
   });
   $('speak-btn')?.addEventListener('click', speakResult);
   $('voice-btn')?.addEventListener('click', startVoiceSearch);

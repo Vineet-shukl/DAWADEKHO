@@ -14,5 +14,6 @@ export const CONFIG = {
   API_URL: resolveApiUrl(),
   DATA_SNAPSHOT: '2026-10-21',
   KENDRA_URL: 'https://janaushadhi.gov.in/KendraDetails.aspx',
-  SUGAM_URL: 'https://play.google.com/store/apps/details?id=com.janaushadhi.sugam',
+  SUGAM_URL: 'https://play.google.com/store/apps/details?id=in.gov.pmbjp',
+  PRODUCT_LIST_URL: 'https://janaushadhi.gov.in/productportfolio/ProductmrpList',
 };

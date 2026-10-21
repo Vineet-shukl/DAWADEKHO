@@ -749,6 +749,19 @@ input:focus-visible {
   font-size: 1rem;
   line-height: 1.5;
 }
+.store-card {
+  background: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 18px;
+  padding: 20px;
+  margin: 0 0 20px;
+  box-shadow: 0 10px 30px rgb(28 25 23 / 0.06);
+}
+.store-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  color: #1c1917;
+}
 .hero-title { max-width: 16ch; }
 .search-panel { padding: 20px; }
 .suggestions li { animation: rise 280ms cubic-bezier(0.22, 1, 0.36, 1) both; }

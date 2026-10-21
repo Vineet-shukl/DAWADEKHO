@@ -14,10 +14,9 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="DawaDekho — See the medicine. See the price.">
   <meta property="og:description" content="Find the Jan Aushadhi generic for your medicine and see your saving.">
-  <meta property="og:image" content="https://dawadekho.vercel.app/og.png">
   <meta property="og:locale" content="en_IN">
   <meta property="og:locale:alternate" content="hi_IN">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,6 +93,16 @@
           <button type="button" class="chip" data-q="Pan 40">Pan 40</button>
           <button type="button" class="chip" data-q="Crocin">Crocin</button>
         </div>
+
+        <section class="store-card" id="stores" aria-labelledby="store-title">
+          <h2 id="store-title" data-i18n="store.title">Find a Jan Aushadhi store</h2>
+          <p class="hint" data-i18n="store.lead">We do not keep our own shop list.</p>
+          <div class="confirm-actions">
+            <a class="btn btn-primary" id="store-official" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="store.official">Open the official locator</a>
+            <button type="button" class="btn btn-secondary" id="store-map" data-i18n="store.map">Search the map near me</button>
+          </div>
+          <p class="hint" id="store-status" data-i18n="store.note">The official list asks for your state and district. Map pins are not checked by us.</p>
+        </section>
 
         <section class="search-panel" id="search-panel">
           <label class="search-label" for="search-input" data-i18n="search.label">Medicine name</label>
@@ -182,8 +191,8 @@
           <p class="meta-line code" id="receipt-code"></p>
           <p class="disclaimer" data-i18n="result.disclaimer">Information only. Confirm with your doctor or pharmacist before switching.</p>
           <div class="link-stack">
-            <a class="btn btn-primary" id="kendra-link" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="result.kendra">Find nearest Jan Aushadhi Kendra</a>
-            <a class="btn btn-ghost" id="sugam-link" href="https://play.google.com/store/apps/details?id=com.janaushadhi.sugam" target="_blank" rel="noopener noreferrer" data-i18n="result.app">Get the official Janaushadhi Sugam app</a>
+            <a class="btn btn-primary" id="kendra-link" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="result.kendra">Open the official Kendra list</a>
+            <a class="btn btn-ghost" id="sugam-link" href="https://play.google.com/store/apps/details?id=in.gov.pmbjp" target="_blank" rel="noopener noreferrer" data-i18n="result.app">Open the official Janaushadhi Sugam app</a>
             <button type="button" class="btn btn-ghost" id="speak-btn" data-i18n="speak.button">Read aloud</button>
             <button type="button" class="btn btn-secondary" id="another" data-i18n="result.another">Check another medicine</button>
           </div>
