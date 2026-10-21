@@ -1,0 +1,12 @@
+environment:
+  GEMINI_API_KEY: ${GEMINI_API_KEY}
+  ALLOWED_ORIGIN: ${ALLOWED_ORIGIN}
+packages:
+  - name: api
+    functions:
+      - name: read-strip
+        runtime: nodejs:18
+        web: true
+        limits:
+          timeout: 20000
+          memory: 256
