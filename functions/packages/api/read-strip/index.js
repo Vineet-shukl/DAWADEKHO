@@ -118,17 +118,20 @@ function imagePart(image) {
   return { inline_data: { mime_type: 'image/jpeg', data: image } };
 }
 
-async function extractStrip(image, signal) {
+async function extractStrip(image, signal, ocrText = '') {
   let draft = null;
   let passes = 0;
+  const ocrNote = ocrText
+    ? `\nA handwriting OCR model (Microsoft TrOCR) transcribed this image as: ${JSON.stringify(ocrText)}\nUse that transcript only when it matches marks you can see. If it conflicts with the image, trust the image and set the field to null.`
+    : '';
 
   for (let i = 0; i < MAX_PASSES; i++) {
     passes = i + 1;
     const text =
       i === 0
-        ? await callGemma([imagePart(image), { text: EXTRACT_PROMPT }], signal)
+        ? await callGemma([imagePart(image), { text: EXTRACT_PROMPT + ocrNote }], signal)
         : await callGemma(
-            [imagePart(image), { text: VERIFY_PROMPT(draft) }],
+            [imagePart(image), { text: VERIFY_PROMPT(draft) + ocrNote }],
             signal
           );
     const next = parseJson(text);
@@ -156,7 +159,8 @@ async function extractStrip(image, signal) {
       form: draft.form ?? null,
       mrp_printed: typeof draft.mrp_printed === 'number' ? draft.mrp_printed : null,
       confidence: typeof draft.confidence === 'number' ? draft.confidence : null,
-      handwriting: Boolean(draft.handwriting),
+      handwriting: Boolean(draft.handwriting) || Boolean(ocrText),
+      ocr_text: ocrText || null,
       verified_passes: passes,
     },
   };
@@ -288,10 +292,11 @@ Reply with ONE JSON object: {"line":"..."}`,
       return reply(200, out.data);
     }
 
+    const ocrText = typeof args.ocr_text === 'string' ? args.ocr_text.trim().slice(0, 240) : '';
     if (!image || typeof image !== 'string') return reply(400, { error: 'no_image' });
     if (image.length > 2.8e6) return reply(413, { error: 'too_big' });
 
-    const out = await extractStrip(image, signal);
+    const out = await extractStrip(image, signal, ocrText);
     if (!out.ok) return reply(422, { error: out.error || 'unreadable' });
     return reply(200, out.data);
   } catch (e) {

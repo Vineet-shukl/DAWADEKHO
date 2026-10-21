@@ -2,6 +2,7 @@ import { CONFIG } from './config.js';
 import { createMatcher, savings } from './match.js';
 import { getLang, setLang, t } from './i18n.js';
 import { animate, stagger } from 'https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm';
+import { readHandwriting } from './ocr.js';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -394,12 +395,25 @@ async function readStrip(file) {
   hideResults();
   $('loading').hidden = false;
   setMascot('think');
+  if ($('loading-title')) $('loading-title').textContent = t('photo.reading');
   let image;
+  let ocrText = '';
+  let previewUrl = '';
   try {
     image = await fileToJpegBase64(file);
+    previewUrl = URL.createObjectURL(file);
+    if ($('loading-title')) $('loading-title').textContent = t('photo.hand');
+    ocrText = await Promise.race([
+      readHandwriting(previewUrl),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('ocr-timeout')), 25000)),
+    ]);
   } catch {
-    showError('err.generic');
-    return;
+    if (!image) {
+      showError('err.generic');
+      return;
+    }
+  } finally {
+    if (previewUrl) URL.revokeObjectURL(previewUrl);
   }
   if (image.length > 2.8e6) {
     showError('err.tooBig');
@@ -411,7 +425,7 @@ async function readStrip(file) {
     const res = await fetch(CONFIG.API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ image }),
+      body: JSON.stringify({ image, ocr_text: ocrText || '' }),
       signal: ctrl.signal,
     });
     clearTimeout(timer);
@@ -424,7 +438,10 @@ async function readStrip(file) {
     $('loading').hidden = true;
     $('confirm-card').hidden = false;
     const hand = $('confirm-hand');
-    if (hand) hand.hidden = !data.handwriting;
+    if (hand) {
+      hand.hidden = !data.handwriting;
+      if (data.ocr_text) hand.textContent = `${t('err.handwriting')} ${data.ocr_text}`;
+    }
     $('confirm-brand').value = data.brand || '';
     $('confirm-salt').value = Array.isArray(data.salts) ? data.salts.join(', ') : '';
     $('confirm-strength').value = data.strength || '';
