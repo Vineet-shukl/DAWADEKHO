@@ -1,0 +1,16 @@
+{
+  "name": "dawadekho",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "See the medicine. See the price. Before you pay.",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-data.mjs",
+    "build:data": "node scripts/build-data.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "fuse.js": "^7.5.0"
+  }
+}
