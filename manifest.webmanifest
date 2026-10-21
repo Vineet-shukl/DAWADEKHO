@@ -4,8 +4,8 @@
   "description": "See the medicine. See the price. Before you pay.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFF8F4",
-  "theme_color": "#E86A3A",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "lang": "en",
   "icons": [
     {

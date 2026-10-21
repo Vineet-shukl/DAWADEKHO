@@ -781,6 +781,81 @@ input:focus-visible {
 }
 .store-row strong { font-size: 1.05rem; }
 .store-row span { color: #44403c; font-size: 0.95rem; }
+
+/* Smooth app frame on iPhone and iPad */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  overscroll-behavior-y: none;
+  background: #f5f5f7;
+}
+.site-header {
+  top: 0;
+  padding-top: calc(var(--s4) + env(safe-area-inset-top));
+  background: rgb(255 255 255 / 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgb(0 0 0 / 0.06);
+}
+main {
+  padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+.wrap {
+  width: min(100% - 32px, 1120px);
+}
+.search-panel,
+.photo-panel,
+.confirm-card,
+.receipt,
+.nomatch,
+.error-box,
+.loading-box,
+.store-card,
+.about {
+  border-radius: 22px;
+  border: 1px solid rgb(0 0 0 / 0.06);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.04), 0 12px 32px rgb(0 0 0 / 0.06);
+  background: #ffffff;
+}
+.btn,
+.chip,
+.search-row,
+.field input {
+  border-radius: 14px;
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active,
+.chip:active,
+.store-row:active {
+  transform: scale(0.97);
+}
+.suggestions,
+.store-list {
+  border-radius: 16px;
+}
+.sticky-bar {
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  background: rgb(255 255 255 / 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+@media (min-width: 1024px) {
+  body {
+    background:
+      radial-gradient(900px 420px at 50% -10%, #fff1e8, transparent 60%),
+      #f5f5f7;
+  }
+  .layout {
+    gap: 28px;
+  }
+}
 @media (max-width: 640px) {
   .hero-title { font-size: 1.7rem; }
   .btn { min-height: 56px; }

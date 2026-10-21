@@ -11,7 +11,7 @@ function motionIn(target, delay = 0) {
   animate(
     target,
     { opacity: [0, 1], y: [14, 0] },
-    { duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }
+    { duration: 0.55, delay, ease: [0.32, 0.72, 0, 1] }
   );
 }
 
