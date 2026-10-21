@@ -1,0 +1,861 @@
+[
+  {
+    "brand": "Dolo 650",
+    "aliases": [
+      "dolo",
+      "dolo650",
+      "dolo 650"
+    ],
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "650mg",
+    "form": "tablet",
+    "approx_mrp": 30.91,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Crocin 650",
+    "aliases": [
+      "crocin",
+      "crocin650",
+      "crocin advance"
+    ],
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "650mg",
+    "form": "tablet",
+    "approx_mrp": 32,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Calpol 650",
+    "aliases": [
+      "calpol",
+      "calpol650"
+    ],
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "650mg",
+    "form": "tablet",
+    "approx_mrp": 28.5,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Dolo 500",
+    "aliases": [
+      "dolo500"
+    ],
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 18,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Crocin 500",
+    "aliases": [
+      "crocin500"
+    ],
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 16,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Pan 40",
+    "aliases": [
+      "pan",
+      "pan40",
+      "pan-40"
+    ],
+    "salts": [
+      "pantoprazole"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 145,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Pantocid 40",
+    "aliases": [
+      "pantocid",
+      "pantocid40"
+    ],
+    "salts": [
+      "pantoprazole"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 120,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Pantop 40",
+    "aliases": [
+      "pantop",
+      "pantop40"
+    ],
+    "salts": [
+      "pantoprazole"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 110,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Omez 20",
+    "aliases": [
+      "omez",
+      "omez20"
+    ],
+    "salts": [
+      "omeprazole"
+    ],
+    "strength": "20mg",
+    "form": "capsule",
+    "approx_mrp": 65,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Razo 20",
+    "aliases": [
+      "razo",
+      "razo20"
+    ],
+    "salts": [
+      "rabeprazole"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "approx_mrp": 140,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Nexpro 40",
+    "aliases": [
+      "nexpro",
+      "nexpro40"
+    ],
+    "salts": [
+      "esomeprazole"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 160,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Augmentin 625",
+    "aliases": [
+      "augmentin",
+      "augmentin625"
+    ],
+    "salts": [
+      "amoxicillin",
+      "clavulanic acid"
+    ],
+    "strength": "500mg+125mg",
+    "form": "tablet",
+    "approx_mrp": 180,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Moxikind CV 625",
+    "aliases": [
+      "moxikind",
+      "moxikind cv"
+    ],
+    "salts": [
+      "amoxicillin",
+      "clavulanic acid"
+    ],
+    "strength": "500mg+125mg",
+    "form": "tablet",
+    "approx_mrp": 160,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Azithral 500",
+    "aliases": [
+      "azithral",
+      "azithral500"
+    ],
+    "salts": [
+      "azithromycin"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 95,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Azee 500",
+    "aliases": [
+      "azee",
+      "azee500"
+    ],
+    "salts": [
+      "azithromycin"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 90,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Ciplox 500",
+    "aliases": [
+      "ciplox",
+      "ciplox500"
+    ],
+    "salts": [
+      "ciprofloxacin"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 55,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Taxim O 200",
+    "aliases": [
+      "taxim",
+      "taxim o",
+      "taximo"
+    ],
+    "salts": [
+      "cefixime"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "approx_mrp": 180,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Glycomet 500",
+    "aliases": [
+      "glycomet",
+      "glycomet500"
+    ],
+    "salts": [
+      "metformin"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 25,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Glyciphage 500",
+    "aliases": [
+      "glyciphage"
+    ],
+    "salts": [
+      "metformin"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 22,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Amaryl 2",
+    "aliases": [
+      "amaryl",
+      "amaryl2"
+    ],
+    "salts": [
+      "glimepiride"
+    ],
+    "strength": "2mg",
+    "form": "tablet",
+    "approx_mrp": 85,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Diamicron 80",
+    "aliases": [
+      "diamicron"
+    ],
+    "salts": [
+      "gliclazide"
+    ],
+    "strength": "80mg",
+    "form": "tablet",
+    "approx_mrp": 120,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Januvia 100",
+    "aliases": [
+      "januvia"
+    ],
+    "salts": [
+      "sitagliptin"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "approx_mrp": 450,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Galvus 50",
+    "aliases": [
+      "galvus"
+    ],
+    "salts": [
+      "vildagliptin"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "approx_mrp": 380,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Forxiga 10",
+    "aliases": [
+      "forxiga"
+    ],
+    "salts": [
+      "dapagliflozin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 520,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Amlong 5",
+    "aliases": [
+      "amlong",
+      "amlong5"
+    ],
+    "salts": [
+      "amlodipine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "approx_mrp": 45,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Amlodac 5",
+    "aliases": [
+      "amlodac"
+    ],
+    "salts": [
+      "amlodipine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "approx_mrp": 40,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Telma 40",
+    "aliases": [
+      "telma",
+      "telma40"
+    ],
+    "salts": [
+      "telmisartan"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 145,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Telmikind 40",
+    "aliases": [
+      "telmikind"
+    ],
+    "salts": [
+      "telmisartan"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "approx_mrp": 90,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Losar 50",
+    "aliases": [
+      "losar",
+      "losar50"
+    ],
+    "salts": [
+      "losartan"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "approx_mrp": 95,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Aten 50",
+    "aliases": [
+      "aten",
+      "aten50"
+    ],
+    "salts": [
+      "atenolol"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "approx_mrp": 35,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Metolar 50",
+    "aliases": [
+      "metolar"
+    ],
+    "salts": [
+      "metoprolol"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "approx_mrp": 65,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Cardace 5",
+    "aliases": [
+      "cardace"
+    ],
+    "salts": [
+      "ramipril"
+    ],
+    "strength": "5mg",
+    "form": "capsule",
+    "approx_mrp": 110,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Atorva 10",
+    "aliases": [
+      "atorva",
+      "atorva10"
+    ],
+    "salts": [
+      "atorvastatin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 95,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Storvas 10",
+    "aliases": [
+      "storvas"
+    ],
+    "salts": [
+      "atorvastatin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 90,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Rosuvas 10",
+    "aliases": [
+      "rosuvas",
+      "rosuvas10"
+    ],
+    "salts": [
+      "rosuvastatin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 160,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Crestor 10",
+    "aliases": [
+      "crestor"
+    ],
+    "salts": [
+      "rosuvastatin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 220,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Clopilet 75",
+    "aliases": [
+      "clopilet"
+    ],
+    "salts": [
+      "clopidogrel"
+    ],
+    "strength": "75mg",
+    "form": "tablet",
+    "approx_mrp": 95,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Ecosprin 75",
+    "aliases": [
+      "ecosprin",
+      "ecosprin75"
+    ],
+    "salts": [
+      "aspirin"
+    ],
+    "strength": "75mg",
+    "form": "tablet",
+    "approx_mrp": 12,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Thyronorm 50",
+    "aliases": [
+      "thyronorm",
+      "thyronorm50"
+    ],
+    "salts": [
+      "thyroxine"
+    ],
+    "strength": "50mcg",
+    "form": "tablet",
+    "approx_mrp": 145,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Eltroxin 50",
+    "aliases": [
+      "eltroxin",
+      "eltroxin50"
+    ],
+    "salts": [
+      "thyroxine"
+    ],
+    "strength": "50mcg",
+    "form": "tablet",
+    "approx_mrp": 130,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Thyronorm 100",
+    "aliases": [
+      "thyronorm100"
+    ],
+    "salts": [
+      "thyroxine"
+    ],
+    "strength": "100mcg",
+    "form": "tablet",
+    "approx_mrp": 160,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Okacet",
+    "aliases": [
+      "okacet",
+      "okacet 10"
+    ],
+    "salts": [
+      "cetirizine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 18,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Cetzine",
+    "aliases": [
+      "cetzine"
+    ],
+    "salts": [
+      "cetirizine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 16,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Xyzal 5",
+    "aliases": [
+      "xyzal"
+    ],
+    "salts": [
+      "levocetirizine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "approx_mrp": 85,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Allegra 120",
+    "aliases": [
+      "allegra",
+      "allegra120"
+    ],
+    "salts": [
+      "fexofenadine"
+    ],
+    "strength": "120mg",
+    "form": "tablet",
+    "approx_mrp": 180,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Montair 10",
+    "aliases": [
+      "montair",
+      "montair10"
+    ],
+    "salts": [
+      "montelukast"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 175,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Telekast 10",
+    "aliases": [
+      "telekast"
+    ],
+    "salts": [
+      "montelukast"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 150,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Asthalin Inhaler",
+    "aliases": [
+      "asthalin"
+    ],
+    "salts": [
+      "salbutamol"
+    ],
+    "strength": "100mcg",
+    "form": "inhaler",
+    "approx_mrp": 140,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Combiflam",
+    "aliases": [
+      "combiflam"
+    ],
+    "salts": [
+      "ibuprofen",
+      "paracetamol"
+    ],
+    "strength": "400mg+325mg",
+    "form": "tablet",
+    "approx_mrp": 45,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Brufen 400",
+    "aliases": [
+      "brufen",
+      "brufen400"
+    ],
+    "salts": [
+      "ibuprofen"
+    ],
+    "strength": "400mg",
+    "form": "tablet",
+    "approx_mrp": 22,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Voveran 50",
+    "aliases": [
+      "voveran",
+      "voveran50"
+    ],
+    "salts": [
+      "diclofenac"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "approx_mrp": 55,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Zerodol P",
+    "aliases": [
+      "zerodol",
+      "zerodol p",
+      "zerodolp"
+    ],
+    "salts": [
+      "aceclofenac",
+      "paracetamol"
+    ],
+    "strength": "100mg+325mg",
+    "form": "tablet",
+    "approx_mrp": 75,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Hifenac P",
+    "aliases": [
+      "hifenac",
+      "hifenac p"
+    ],
+    "salts": [
+      "aceclofenac",
+      "paracetamol"
+    ],
+    "strength": "100mg+325mg",
+    "form": "tablet",
+    "approx_mrp": 70,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Domstal 10",
+    "aliases": [
+      "domstal"
+    ],
+    "salts": [
+      "domperidone"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "approx_mrp": 35,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Emeset 4",
+    "aliases": [
+      "emeset"
+    ],
+    "salts": [
+      "ondansetron"
+    ],
+    "strength": "4mg",
+    "form": "tablet",
+    "approx_mrp": 55,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Shelcal 500",
+    "aliases": [
+      "shelcal"
+    ],
+    "salts": [
+      "calcium carbonate",
+      "cholecalciferol"
+    ],
+    "strength": "500mg+250iu",
+    "form": "tablet",
+    "approx_mrp": 120,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Limcee 500",
+    "aliases": [
+      "limcee"
+    ],
+    "salts": [
+      "ascorbic acid"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "approx_mrp": 25,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Neurobion Forte",
+    "aliases": [
+      "neurobion"
+    ],
+    "salts": [
+      "methylcobalamin"
+    ],
+    "strength": "1500mcg",
+    "form": "tablet",
+    "approx_mrp": 55,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Pan D",
+    "aliases": [
+      "pand",
+      "pan-d",
+      "pan d"
+    ],
+    "salts": [
+      "pantoprazole",
+      "domperidone"
+    ],
+    "strength": "40mg+30mg",
+    "form": "capsule",
+    "approx_mrp": 160,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Razo D",
+    "aliases": [
+      "razo d",
+      "razod"
+    ],
+    "salts": [
+      "rabeprazole",
+      "domperidone"
+    ],
+    "strength": "20mg+30mg",
+    "form": "capsule",
+    "approx_mrp": 155,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Telma AM",
+    "aliases": [
+      "telma am",
+      "telmaam"
+    ],
+    "salts": [
+      "telmisartan",
+      "amlodipine"
+    ],
+    "strength": "40mg+5mg",
+    "form": "tablet",
+    "approx_mrp": 210,
+    "note": "approx MRP, verify on strip"
+  },
+  {
+    "brand": "Telma H",
+    "aliases": [
+      "telma h",
+      "telmah"
+    ],
+    "salts": [
+      "telmisartan",
+      "hydrochlorothiazide"
+    ],
+    "strength": "40mg+12.5mg",
+    "form": "tablet",
+    "approx_mrp": 175,
+    "note": "approx MRP, verify on strip"
+  }
+]
