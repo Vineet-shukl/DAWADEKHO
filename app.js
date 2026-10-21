@@ -346,10 +346,7 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   $('receipt-pack').textContent = t('result.pack', { unit: g.unit });
   $('receipt-code').textContent = t('result.code', { code: g.code });
   $('receipt-source').textContent = t('result.source', { date: CONFIG.DATA_SNAPSHOT });
-  $('kendra-link').href = CONFIG.KENDRA_URL;
   $('sugam-link').href = CONFIG.SUGAM_URL;
-  const official = $('store-official');
-  if (official) official.href = CONFIG.KENDRA_URL;
   $('receipt').hidden = false;
   $('receipt').setAttribute('aria-label', t('a11y.resultReady'));
   setMascot('happy');
@@ -674,7 +671,6 @@ async function init() {
     input.value = '';
     showSearch();
   });
-  $('store-official') && ($('store-official').href = CONFIG.KENDRA_URL);
   $('store-map')?.addEventListener('click', () => {
     const status = $('store-status');
     const list = $('store-list');
