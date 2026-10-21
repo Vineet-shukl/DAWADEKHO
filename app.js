@@ -132,30 +132,40 @@ function hitsFromQuery(query) {
 }
 
 function renderSuggestions(query) {
+  const live = $('live-guess');
   if (!matcher || !query.trim()) {
     lastHits = [];
     $('suggestions').hidden = true;
     $('search-input').setAttribute('aria-expanded', 'false');
+    if (live) live.hidden = true;
     setMascot('idle');
     return;
   }
   const items = hitsFromQuery(query);
   paintSuggestions(items);
-  const weak = !items.length || (items[0].score ?? 1) > 0.18;
-  if (weak) schedulePredict(query.trim());
-  else {
-    clearTimeout(predictTimer);
-    setMascot('idle');
+  if (live) {
+    if (items[0]) {
+      live.hidden = false;
+      live.textContent = t('search.live', { name: items[0].label });
+    } else {
+      live.hidden = true;
+    }
   }
+  schedulePredict(query.trim(), items.map((item) => item.label));
 }
 
-function schedulePredict(query) {
+function schedulePredict(query, candidates) {
   clearTimeout(predictTimer);
   if (!navigator.onLine || !CONFIG.API_URL || query.length < 3) return;
-  predictTimer = setTimeout(() => askGemma(query), 520);
+  const live = $('live-guess');
+  if (live && candidates[0]) {
+    live.hidden = false;
+    live.textContent = t('search.checking');
+  }
+  predictTimer = setTimeout(() => askGemma(query, candidates), 420);
 }
 
-async function askGemma(query) {
+async function askGemma(query, candidates = []) {
   const seq = ++predictSeq;
   if ($('search-input').value.trim() !== query) return;
   setMascot('think');
@@ -163,7 +173,7 @@ async function askGemma(query) {
     const res = await fetch(CONFIG.API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ predict: query }),
+      body: JSON.stringify({ predict: query, candidates }),
       signal: AbortSignal.timeout(8000),
     });
     if (seq !== predictSeq || $('search-input').value.trim() !== query) return;
@@ -179,8 +189,20 @@ async function askGemma(query) {
       return;
     }
     const label = confirmed.brand?.brand || confirmed.generic.generic_name;
+    const allowed = new Set(candidates.map((name) => name.toLowerCase()));
+    if (candidates.length && !allowed.has(label.toLowerCase()) && !allowed.has(guess.toLowerCase())) {
+      const liveBack = $('live-guess');
+      if (liveBack && candidates[0]) liveBack.textContent = t('search.live', { name: candidates[0] });
+      setMascot('idle');
+      return;
+    }
     const local = hitsFromQuery(query).filter((h) => h.label.toLowerCase() !== label.toLowerCase());
     paintSuggestions([{ label, payload: confirmed, guess: true }, ...local]);
+    const live = $('live-guess');
+    if (live) {
+      live.hidden = false;
+      live.textContent = t('search.checked', { name: label });
+    }
     setMascot('happy');
   } catch {
     if (seq === predictSeq) setMascot('idle');
@@ -480,7 +502,7 @@ async function init() {
     const q = input.value;
     $('search-clear').hidden = !q;
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => renderSuggestions(q), 120);
+    debounceTimer = setTimeout(() => renderSuggestions(q), 40);
   });
   input.addEventListener('keydown', (e) => {
     const list = $('suggestions');

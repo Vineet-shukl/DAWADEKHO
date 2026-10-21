@@ -32,3 +32,10 @@ test('lookup by salt and strength (photo path)', () => {
 
 test('wrong strength does not match', () =>
   assert.equal(m.bySalt(['paracetamol'], '9999mg'), null));
+
+test('live prefix guess prefers the name being typed', () => {
+  const top = m.suggest('dol', 4).map((h) => h.label);
+  assert.equal(top[0], 'Dolo 650');
+  assert.ok(top.includes('Dolo 500'));
+  assert.equal(m.suggest('pan', 1)[0].label, 'Pan 40');
+});

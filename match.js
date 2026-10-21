@@ -53,12 +53,33 @@ export function createMatcher(generics, brands, Fuse = globalThis.Fuse) {
     return generic ? { brand: top.b, generic, alternatives: hits.slice(1), score: hits[0].score } : null;
   };
 
-  const suggest = (q, limit = 5) =>
-    fuse.search(clean(q), { limit }).map((h) => ({
-      score: h.score ?? 1,
-      label: h.item.kind === 'brand' ? h.item.b.brand : h.item.g.generic_name,
-      item: h.item,
-    }));
+  const labelOf = (row) => (row.kind === 'brand' ? row.b.brand : row.g.generic_name);
+
+  const suggest = (q, limit = 6) => {
+    const needle = clean(q);
+    if (!needle) return [];
+    const scored = [];
+    const seen = new Set();
+    const push = (row, score) => {
+      const label = labelOf(row);
+      if (seen.has(label)) return;
+      seen.add(label);
+      scored.push({ item: row, label, score });
+    };
+    for (const row of rows) {
+      const keys = row.k.filter(Boolean);
+      if (keys.some((k) => k === needle)) push(row, 0);
+      else if (keys.some((k) => k.startsWith(needle))) push(row, 0.05);
+      else if (needle.length >= 3 && keys.some((k) => k.includes(needle))) push(row, 0.22);
+    }
+    if (scored.length < limit) {
+      for (const hit of fuse.search(needle, { limit: limit + 6 })) {
+        push(hit.item, 0.45 + (hit.score ?? 0));
+      }
+    }
+    scored.sort((a, b) => a.score - b.score || a.label.length - b.label.length);
+    return scored.slice(0, limit);
+  };
 
   return { search, bySalt, suggest };
 }

@@ -226,14 +226,19 @@ export async function main(args) {
     const signal = AbortSignal.timeout(45000);
 
     if (predict && !image) {
+      const candidates = Array.isArray(args.candidates)
+        ? args.candidates.filter((s) => typeof s === 'string').slice(0, 6)
+        : [];
       const text = await callGemma(
         [
           {
-            text: `A person in India is typing a medicine name and may misspell it.
+            text: `Check a medicine-name guess. The person may be mid-word or misspelling.
 Typed: ${JSON.stringify(predict)}
-Reply with ONE JSON object only: {"brand_query":"Dolo 650","confidence":0.8}
-brand_query is the likely brand plus strength, or null if you cannot tell.
-Do not invent a medicine that the letters do not suggest. No prices. No medical advice.`,
+Local list, best first: ${JSON.stringify(candidates)}
+Pick the list item the letters most likely mean, or fix an obvious misspelling into one of those names.
+Reply with ONE JSON object only: {"brand_query":"Dolo 650","confidence":0.9}
+Use null for brand_query if none of the list fits.
+Do not invent a medicine outside that list. No prices. No medical advice.`,
           },
         ],
         AbortSignal.timeout(8000)

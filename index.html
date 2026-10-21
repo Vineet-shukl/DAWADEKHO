@@ -95,7 +95,7 @@
           <button type="button" class="chip" data-q="Crocin">Crocin</button>
         </div>
 
-        <section class="search-panel" id="search-panel" hidden>
+        <section class="search-panel" id="search-panel">
           <label class="search-label" for="search-input" data-i18n="search.label">Medicine name</label>
           <div class="search-row">
             <span aria-hidden="true">⌕</span>
@@ -105,6 +105,7 @@
             <button type="button" class="icon-btn" id="voice-btn" data-i18n-aria="a11y.voice" aria-label="Speak a medicine name" title="Voice">🎙</button>
             <button type="button" class="icon-btn" id="search-clear" hidden data-i18n-aria="search.clear.aria" aria-label="Clear search">×</button>
           </div>
+          <p class="hint" id="live-guess" hidden></p>
           <p class="hint" data-i18n="search.hint">Spelling mistakes are okay.</p>
           <p class="hint" id="voice-status" hidden></p>
           <ul class="suggestions" id="suggestions" role="listbox" hidden></ul>
