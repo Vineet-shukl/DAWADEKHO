@@ -4,4 +4,5 @@
 - Data: official Jan Aushadhi product list (PMBI), snapshot dated in README.
 - AI: Gemma 4 reads printed medicine strips only. It never generates drug information.
 - Not medical advice. Users are told to confirm with a doctor or pharmacist.
+- Live: https://dawadekho.vercel.app
 - Source code: https://github.com/Vineet-shukl/DAWADEKHO (MIT)

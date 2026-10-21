@@ -4,7 +4,7 @@
 
 Free, open-source web app for Hackfest Lucknow PS3 — *The Prescription You Cannot Read*. Type a brand (or photograph a **printed** strip) and see the Jan Aushadhi generic with the same salt and strength, with the saving as the headline: **₹240 → ₹28**.
 
-**Live URL:** *(Vercel)* — see latest production deploy after `vercel --prod`.
+**Live URL:** https://dawadekho.vercel.app
 
 ---
 

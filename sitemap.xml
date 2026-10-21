@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://REPLACE.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://REPLACE.vercel.app/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://REPLACE.vercel.app/?lang=hi"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://REPLACE.vercel.app/"/>
+    <loc>https://dawadekho.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dawadekho.vercel.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://dawadekho.vercel.app/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dawadekho.vercel.app/"/>
   </url>
 </urlset>
