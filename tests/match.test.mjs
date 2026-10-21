@@ -33,6 +33,13 @@ test('lookup by salt and strength (photo path)', () => {
 test('wrong strength does not match', () =>
   assert.equal(m.bySalt(['paracetamol'], '9999mg'), null));
 
+test('salt and common name find the generic', () => {
+  assert.equal(m.search('paracetamol')?.generic.salts[0], 'paracetamol');
+  assert.equal(m.search('pcm')?.generic.salts[0], 'paracetamol');
+  assert.equal(m.search('acetaminophen 650')?.generic.strength, '650mg');
+  assert.equal(m.bySalt(['Acetaminophen'], '650 mg')?.generic.salts[0], 'paracetamol');
+});
+
 test('live prefix guess prefers the name being typed', () => {
   const top = m.suggest('dol', 4).map((h) => h.label);
   assert.equal(top[0], 'Dolo 650');

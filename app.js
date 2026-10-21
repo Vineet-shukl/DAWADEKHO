@@ -310,16 +310,14 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   const brand = match.brand;
   const brandedPrice = stripMrp != null && stripMrp !== '' ? Number(stripMrp) : brand?.approx_mrp ?? null;
   const useApprox = stripMrp == null || stripMrp === '';
-  if (brandedPrice == null) {
-    showNoMatch();
-    return;
-  }
-  const sav = savings(brandedPrice, g.mrp);
-  const titleBrand = brand?.brand || g.generic_name;
-  $('receipt-title').textContent = `${titleBrand}  (${g.salts.join(' + ')} ${g.strength})`;
-  $('receipt-branded').textContent = formatINR(brandedPrice);
+  const hasBrandPrice = brandedPrice != null && !Number.isNaN(brandedPrice);
+  const sav = hasBrandPrice ? savings(brandedPrice, g.mrp) : { amount: 0, pct: 0 };
+  $('receipt-title').textContent = g.generic_name;
+  $('receipt-branded').textContent = hasBrandPrice ? formatINR(brandedPrice) : '—';
   $('receipt-generic').textContent = formatINR(g.mrp);
-  $('approx-tag').hidden = !useApprox;
+  $('approx-tag').hidden = !useApprox || !hasBrandPrice;
+  const band = document.querySelector('.save-band');
+  if (band) band.hidden = !hasBrandPrice;
   const amountStr = formatINR(sav.amount);
   $('save-amount').textContent = amountStr;
   $('save-label').dataset.amount = amountStr;
