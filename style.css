@@ -735,6 +735,22 @@ input:focus-visible {
   font-weight: 700;
 }
 #live-guess[hidden] { display: none !important; }
+#live-guess.is-loading::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid #e7e5e4;
+  border-top-color: #9a3412;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.scan-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 .form-line {
   display: flex;
   align-items: center;

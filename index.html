@@ -87,7 +87,10 @@
         </ol>
 
         <div class="cta-stack" id="cta-stack">
-          <button type="button" class="btn btn-primary" id="cta-photo" data-i18n="home.cta.photo">Photo of strip</button>
+          <div class="scan-pair">
+            <button type="button" class="btn btn-primary" id="cta-photo" data-i18n="home.cta.photo">Scan strip</button>
+            <button type="button" class="btn btn-secondary" id="cta-upload" data-i18n="home.cta.upload">Upload photo</button>
+          </div>
           <button type="button" class="btn btn-secondary" id="cta-type" data-i18n="home.cta.type">Type medicine name</button>
         </div>
         <p class="privacy" data-i18n="home.privacy">No login. Photos are not saved.</p>
@@ -130,7 +133,11 @@
           <p class="photo-tip" data-i18n="photo.tip">Show the printed side. Keep it flat and well lit.</p>
           <input class="file-input" id="photo-input" type="file" accept="image/*" capture="environment"
             data-i18n-aria="a11y.camera" aria-label="Open camera to photograph medicine strip">
-          <button type="button" class="btn btn-primary" id="photo-pick" data-i18n="home.cta.photo">Photo of strip</button>
+          <input class="file-input" id="upload-input" type="file" accept="image/*" aria-label="Upload a photo of the medicine">
+          <div class="scan-pair">
+            <button type="button" class="btn btn-primary" id="photo-pick" data-i18n="home.cta.photo">Scan strip</button>
+            <button type="button" class="btn btn-secondary" id="upload-pick" data-i18n="home.cta.upload">Upload photo</button>
+          </div>
         </section>
 
         <section class="confirm-card" id="confirm-card" hidden>

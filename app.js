@@ -153,26 +153,23 @@ function renderSuggestions(query) {
       live.hidden = true;
     }
   }
-  schedulePredict(query.trim(), items.map((item) => item.label));
   clearTimeout(autoShowTimer);
-  const top = items[0];
-  if (top && query.trim().length >= 4 && (top.score ?? 1) <= 0.05) {
-    autoShowTimer = setTimeout(() => {
-      if ($('search-input').value.trim() !== query.trim()) return;
-      selectHit(top);
-    }, 700);
-  }
+  clearTimeout(predictTimer);
+  const weak = !items.length || (items[0].score ?? 1) > 0.08;
+  if (weak) schedulePredict(query.trim(), items.map((item) => item.label));
+  else if (live) live.classList.remove('is-loading');
 }
 
 function schedulePredict(query, candidates) {
   clearTimeout(predictTimer);
   if (!navigator.onLine || !CONFIG.API_URL || query.length < 3) return;
   const live = $('live-guess');
-  if (live && candidates[0]) {
+  if (live) {
     live.hidden = false;
+    live.classList.add('is-loading');
     live.textContent = t('search.checking');
   }
-  predictTimer = setTimeout(() => askGemma(query, candidates), 420);
+  predictTimer = setTimeout(() => askGemma(query, candidates), 280);
 }
 
 async function askGemma(query, candidates = []) {
@@ -189,6 +186,7 @@ async function askGemma(query, candidates = []) {
     if (seq !== predictSeq || $('search-input').value.trim() !== query) return;
     if (!res.ok) {
       setMascot('idle');
+      $('live-guess')?.classList.remove('is-loading');
       return;
     }
     const data = await res.json();
@@ -200,9 +198,12 @@ async function askGemma(query, candidates = []) {
     }
     const label = confirmed.brand?.brand || confirmed.generic.generic_name;
     const allowed = new Set(candidates.map((name) => name.toLowerCase()));
-    if (candidates.length && !allowed.has(label.toLowerCase()) && !allowed.has(guess.toLowerCase())) {
+    if (candidates.length && !allowed.has(label.toLowerCase()) && !allowed.has(guess.toLowerCase()) && !confirmed.generic) {
       const liveBack = $('live-guess');
-      if (liveBack && candidates[0]) liveBack.textContent = t('search.live', { name: candidates[0] });
+      if (liveBack && candidates[0]) {
+        liveBack.classList.remove('is-loading');
+        liveBack.textContent = t('search.live', { name: candidates[0] });
+      }
       setMascot('idle');
       return;
     }
@@ -211,11 +212,15 @@ async function askGemma(query, candidates = []) {
     const live = $('live-guess');
     if (live) {
       live.hidden = false;
+      live.classList.remove('is-loading');
       live.textContent = t('search.checked', { name: label });
     }
     setMascot('happy');
   } catch {
-    if (seq === predictSeq) setMascot('idle');
+    if (seq === predictSeq) {
+      setMascot('idle');
+      $('live-guess')?.classList.remove('is-loading');
+    }
   }
 }
 
@@ -588,9 +593,15 @@ async function init() {
   $('cta-type').addEventListener('click', openType);
   $('sticky-type').addEventListener('click', openType);
   $('error-type').addEventListener('click', openType);
+  const openUpload = () => {
+    showPhoto();
+    $('upload-input').click();
+  };
   $('cta-photo').addEventListener('click', openPhoto);
   $('sticky-photo').addEventListener('click', openPhoto);
+  $('cta-upload')?.addEventListener('click', openUpload);
   $('photo-pick').addEventListener('click', () => $('photo-input').click());
+  $('upload-pick')?.addEventListener('click', () => $('upload-input').click());
 
   document.querySelectorAll('.chip').forEach((chip) => {
     chip.addEventListener('click', () => runQuery(chip.getAttribute('data-q')));
@@ -644,11 +655,13 @@ async function init() {
     input.focus();
   });
 
-  $('photo-input').addEventListener('change', () => {
-    const file = $('photo-input').files?.[0];
+  const onPhotoFile = (input) => {
+    const file = input.files?.[0];
     if (file) readStrip(file);
-    $('photo-input').value = '';
-  });
+    input.value = '';
+  };
+  $('photo-input').addEventListener('change', () => onPhotoFile($('photo-input')));
+  $('upload-input')?.addEventListener('change', () => onPhotoFile($('upload-input')));
 
   $('confirm-go').addEventListener('click', confirmLookup);
   $('confirm-retake').addEventListener('click', openPhoto);
