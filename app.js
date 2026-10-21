@@ -6,8 +6,15 @@ const $ = (id) => document.getElementById(id);
 
 let matcher = null;
 let debounceTimer = null;
+let predictTimer = null;
+let predictSeq = 0;
 let activeIndex = -1;
 let lastHits = [];
+
+function setMascot(mood) {
+  const el = $('mascot');
+  if (el) el.dataset.mood = mood;
+}
 
 function formatINR(n) {
   const num = Number(n) || 0;
@@ -79,32 +86,11 @@ function showPhoto() {
   }
 }
 
-function renderSuggestions(query) {
+function paintSuggestions(items) {
   const list = $('suggestions');
   list.innerHTML = '';
   activeIndex = -1;
-  if (!matcher || !query.trim()) {
-    list.hidden = true;
-    $('search-input').setAttribute('aria-expanded', 'false');
-    lastHits = [];
-    return;
-  }
-  const result = matcher.search(query, 5);
-  if (!result) {
-    list.hidden = true;
-    $('search-input').setAttribute('aria-expanded', 'false');
-    lastHits = [];
-    return;
-  }
-  const items = [];
-  if (result.brand) items.push({ label: result.brand.brand, payload: result });
-  else if (result.generic) items.push({ label: result.generic.generic_name, payload: result });
-  for (const alt of result.alternatives || []) {
-    const it = alt.item;
-    if (it.kind === 'brand') items.push({ label: it.b.brand, payload: { brand: it.b, generic: null } });
-    else items.push({ label: it.g.generic_name, payload: { generic: it.g } });
-  }
-  lastHits = items.slice(0, 5);
+  lastHits = items.slice(0, 6);
   lastHits.forEach((hit, i) => {
     const li = document.createElement('li');
     const btn = document.createElement('button');
@@ -112,7 +98,8 @@ function renderSuggestions(query) {
     btn.id = `sug-${i}`;
     btn.setAttribute('role', 'option');
     btn.setAttribute('aria-selected', 'false');
-    btn.textContent = hit.label;
+    btn.textContent = hit.guess ? t('search.guess', { name: hit.label }) : hit.label;
+    if (hit.guess) btn.classList.add('guess');
     btn.addEventListener('click', () => selectHit(hit));
     li.appendChild(btn);
     list.appendChild(li);
@@ -120,6 +107,71 @@ function renderSuggestions(query) {
   list.hidden = lastHits.length === 0;
   $('search-input').setAttribute('aria-expanded', String(!list.hidden));
   list.setAttribute('aria-label', t('search.results.aria', { n: lastHits.length }));
+}
+
+function hitsFromQuery(query) {
+  const ranked = matcher.suggest(query, 5);
+  return ranked.map((row) => {
+    const it = row.item;
+    if (it.kind === 'brand') return { label: it.b.brand, payload: { brand: it.b, generic: null }, score: row.score };
+    return { label: it.g.generic_name, payload: { generic: it.g }, score: row.score };
+  });
+}
+
+function renderSuggestions(query) {
+  if (!matcher || !query.trim()) {
+    lastHits = [];
+    $('suggestions').hidden = true;
+    $('search-input').setAttribute('aria-expanded', 'false');
+    setMascot('idle');
+    return;
+  }
+  const items = hitsFromQuery(query);
+  paintSuggestions(items);
+  const weak = !items.length || (items[0].score ?? 1) > 0.18;
+  if (weak) schedulePredict(query.trim());
+  else {
+    clearTimeout(predictTimer);
+    setMascot('idle');
+  }
+}
+
+function schedulePredict(query) {
+  clearTimeout(predictTimer);
+  if (!navigator.onLine || !CONFIG.API_URL || query.length < 3) return;
+  predictTimer = setTimeout(() => askGemma(query), 520);
+}
+
+async function askGemma(query) {
+  const seq = ++predictSeq;
+  if ($('search-input').value.trim() !== query) return;
+  setMascot('think');
+  try {
+    const res = await fetch(CONFIG.API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ predict: query }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (seq !== predictSeq || $('search-input').value.trim() !== query) return;
+    if (!res.ok) {
+      setMascot('idle');
+      return;
+    }
+    const data = await res.json();
+    const guess = (data.brand_query || '').trim();
+    const confirmed = guess ? matcher.search(guess) : null;
+    if (!confirmed?.generic && !confirmed?.brand) {
+      setMascot('idle');
+      return;
+    }
+    const label = confirmed.brand?.brand || confirmed.generic.generic_name;
+    const local = hitsFromQuery(query).filter((h) => h.label.toLowerCase() !== label.toLowerCase());
+    paintSuggestions([{ label, payload: confirmed, guess: true }, ...local]);
+    setMascot('happy');
+  } catch {
+    if (seq === predictSeq) setMascot('idle');
+  }
 }
 
 function resolveHit(hit) {
@@ -179,6 +231,7 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   $('sugam-link').href = CONFIG.SUGAM_URL;
   $('receipt').hidden = false;
   $('receipt').setAttribute('aria-label', t('a11y.resultReady'));
+  setMascot('happy');
 }
 
 function runQuery(q) {
@@ -221,6 +274,7 @@ async function readStrip(file) {
   }
   hideResults();
   $('loading').hidden = false;
+  setMascot('think');
   let image;
   try {
     image = await fileToJpegBase64(file);
@@ -328,6 +382,7 @@ function startVoiceSearch() {
   status.hidden = false;
   status.textContent = t('voice.listening');
   btn.classList.add('is-listening');
+  setMascot('listen');
   rec.onresult = (e) => {
     const said = e.results?.[0]?.[0]?.transcript?.trim();
     btn.classList.remove('is-listening');

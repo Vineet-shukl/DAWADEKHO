@@ -1,6 +1,6 @@
 # DawaDekho — Design System
 
-**Direction: "neobrutalist orange."** Hackfest energy — thick black borders, hard offset shadows, bold type, orange (`#FF5A1F`) as the base. Cream paper (`#FFF4E8`) behind. Savings sit on an orange slab, not soft green. Still honest about prices; never clinical blue.
+**Direction: "soft paper."** Warm cream, coral (`#E86A3A`), sage savings (`#1F7A4D`), round cards, and a small mascot. Motion is short and interruptible. Prices stay honest.
 
 Built for: a first-time user, 18–75, on a small Android phone, reading Hindi or English, possibly in bright sunlight.
 

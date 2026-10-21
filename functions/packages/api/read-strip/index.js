@@ -220,9 +220,31 @@ export async function main(args) {
 
   const image = args.image;
   const voiceText = args.voice_text || args.text;
+  const predict = typeof args.predict === 'string' ? args.predict.trim().slice(0, 80) : '';
 
   try {
     const signal = AbortSignal.timeout(45000);
+
+    if (predict && !image) {
+      const text = await callGemma(
+        [
+          {
+            text: `A person in India is typing a medicine name and may misspell it.
+Typed: ${JSON.stringify(predict)}
+Reply with ONE JSON object only: {"brand_query":"Dolo 650","confidence":0.8}
+brand_query is the likely brand plus strength, or null if you cannot tell.
+Do not invent a medicine that the letters do not suggest. No prices. No medical advice.`,
+          },
+        ],
+        AbortSignal.timeout(8000)
+      );
+      const d = parseJson(text);
+      const brand_query = d?.brand_query ? String(d.brand_query).slice(0, 80) : null;
+      return reply(200, {
+        brand_query,
+        confidence: typeof d?.confidence === 'number' ? d.confidence : null,
+      });
+    }
 
     if (typeof voiceText === 'string' && voiceText.trim() && !image) {
       const out = await normaliseVoice(voiceText.trim(), signal);

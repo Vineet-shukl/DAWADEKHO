@@ -48,12 +48,19 @@ export function createMatcher(generics, brands, Fuse = globalThis.Fuse) {
     const hits = fuse.search(clean(q), { limit });
     if (!hits.length) return null;
     const top = hits[0].item;
-    if (top.kind === 'generic') return { generic: top.g, alternatives: hits.slice(1) };
+    if (top.kind === 'generic') return { generic: top.g, alternatives: hits.slice(1), score: hits[0].score };
     const generic = byKey.get(key(top.b.salts, top.b.strength));
-    return generic ? { brand: top.b, generic, alternatives: hits.slice(1) } : null;
+    return generic ? { brand: top.b, generic, alternatives: hits.slice(1), score: hits[0].score } : null;
   };
 
-  return { search, bySalt };
+  const suggest = (q, limit = 5) =>
+    fuse.search(clean(q), { limit }).map((h) => ({
+      score: h.score ?? 1,
+      label: h.item.kind === 'brand' ? h.item.b.brand : h.item.g.generic_name,
+      item: h.item,
+    }));
+
+  return { search, bySalt, suggest };
 }
 
 export const savings = (branded, generic) => {

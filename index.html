@@ -9,8 +9,8 @@
   <link rel="alternate" hreflang="en" href="https://dawadekho.vercel.app/?lang=en">
   <link rel="alternate" hreflang="hi" href="https://dawadekho.vercel.app/?lang=hi">
   <link rel="alternate" hreflang="x-default" href="https://dawadekho.vercel.app/">
-  <meta name="theme-color" content="#FF5A1F" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1A120C" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FFF8F4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1410" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="DawaDekho — See the medicine. See the price.">
   <meta property="og:description" content="Find the Jan Aushadhi generic for your medicine and see your saving.">
@@ -49,7 +49,21 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="./" data-i18n="app.name">DawaDekho</a>
+      <a class="logo" href="./">
+        <span class="mascot" id="mascot" data-mood="idle" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44">
+            <ellipse class="mascot-shadow" cx="32" cy="58" rx="14" ry="3"/>
+            <circle class="mascot-body" cx="32" cy="32" r="22"/>
+            <circle class="mascot-cheek" cx="20" cy="36" r="3"/>
+            <circle class="mascot-cheek" cx="44" cy="36" r="3"/>
+            <circle class="eye eye-l" cx="24" cy="30" r="2.4"/>
+            <circle class="eye eye-r" cx="40" cy="30" r="2.4"/>
+            <path class="smile" d="M26 38c2 3 10 3 12 0" fill="none" stroke-width="2" stroke-linecap="round"/>
+            <path class="leaf" d="M46 14c6 2 8 8 4 12-6-1-10-6-4-12z"/>
+          </svg>
+        </span>
+        <span data-i18n="app.name">DawaDekho</span>
+      </a>
       <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle.aria" aria-label="Change language">
         <button type="button" id="lang-en" aria-pressed="true">EN</button>
         <button type="button" id="lang-hi" aria-pressed="false">हिं</button>
