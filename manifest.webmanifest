@@ -1,0 +1,18 @@
+{
+  "name": "DawaDekho",
+  "short_name": "DawaDekho",
+  "description": "See the medicine. See the price. Before you pay.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF8F1",
+  "theme_color": "#FBF8F1",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

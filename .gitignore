@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+functions/.deployed/
+*.jpg
+*.jpeg
+*.png
+!icon.svg
+!Screenshot*.png
+!gdgsrmcem.tech_hackfest_ps.png
+.DS_Store
+Thumbs.db
