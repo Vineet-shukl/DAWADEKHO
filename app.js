@@ -235,6 +235,65 @@ function showNoMatch() {
   $('nomatch').hidden = false;
 }
 
+const FORM_ICONS = {
+  tablet:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><rect x="6" y="10" width="20" height="12" rx="6" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/></svg>',
+  capsule:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><rect x="4" y="12" width="24" height="8" rx="4" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/><path d="M16 12v8" stroke="#9a3412" stroke-width="2"/></svg>',
+  liquid:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 4c4 6 8 9 8 14a8 8 0 1 1-16 0c0-5 4-8 8-14z" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/></svg>',
+  powder:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><circle cx="10" cy="18" r="2" fill="#9a3412"/><circle cx="16" cy="12" r="2" fill="#9a3412"/><circle cx="22" cy="18" r="2" fill="#9a3412"/><circle cx="16" cy="22" r="2" fill="#9a3412"/></svg>',
+  injection:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><rect x="12" y="6" width="8" height="16" rx="2" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/><path d="M14 22h4l-2 4z" fill="#9a3412"/></svg>',
+  inhaler:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><rect x="8" y="8" width="12" height="16" rx="3" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/><path d="M20 14h6v6h-6" fill="none" stroke="#9a3412" stroke-width="2"/></svg>',
+  cream:
+    '<svg viewBox="0 0 32 32" width="28" height="28"><rect x="10" y="12" width="12" height="12" rx="2" fill="#fff7ed" stroke="#9a3412" stroke-width="2"/><path d="M13 12V8h6v4" fill="none" stroke="#9a3412" stroke-width="2"/></svg>',
+};
+
+function formIcon(form) {
+  const f = String(form || '').toLowerCase();
+  if (f === 'capsule') return FORM_ICONS.capsule;
+  if (['syrup', 'solution', 'mouthwash'].includes(f)) return FORM_ICONS.liquid;
+  if (f === 'powder') return FORM_ICONS.powder;
+  if (f === 'injection') return FORM_ICONS.injection;
+  if (f === 'inhaler') return FORM_ICONS.inhaler;
+  if (['cream', 'ointment', 'gel'].includes(f)) return FORM_ICONS.cream;
+  return FORM_ICONS.tablet;
+}
+
+let describeSeq = 0;
+
+async function clarifyWithGemma(generic, fallback) {
+  if (!navigator.onLine || !CONFIG.API_URL) return;
+  const seq = ++describeSeq;
+  try {
+    const res = await fetch(CONFIG.API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        describe: {
+          name: generic.generic_name,
+          form: generic.form,
+          salts: generic.salts.join(', '),
+          strength: generic.strength,
+          unit: generic.unit,
+        },
+      }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok || seq !== describeSeq) return;
+    const data = await res.json();
+    const line = (data.line || '').trim();
+    if (!line || /treat|cure|dose|pain|fever|infect|safe to|switch/i.test(line)) return;
+    if ($('receipt').hidden) return;
+    $('receipt-about').textContent = line;
+  } catch {
+    $('receipt-about').textContent = fallback;
+  }
+}
+
 function showResult(match, { stripMrp = null, approx = true } = {}) {
   hideResults();
   const g = match.generic;
@@ -259,6 +318,18 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   $('receipt-same').textContent = brand
     ? t('result.sameAs', { brand: brand.brand })
     : `${g.salts.join(', ')} · ${g.strength}`;
+  const formKey = `form.${String(g.form || 'tablet').toLowerCase()}`;
+  const formName = t(formKey) === formKey ? g.form : t(formKey);
+  $('form-icon').innerHTML = formIcon(g.form);
+  $('form-label').textContent = formName;
+  const about = t('result.about', {
+    form: formName,
+    salt: g.salts.join(' + '),
+    strength: g.strength,
+    unit: g.unit,
+  });
+  $('receipt-about').textContent = about;
+  clarifyWithGemma(g, about);
   $('receipt-pack').textContent = t('result.pack', { unit: g.unit });
   $('receipt-code').textContent = t('result.code', { code: g.code });
   $('receipt-source').textContent = t('result.source', { date: CONFIG.DATA_SNAPSHOT });

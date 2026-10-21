@@ -251,6 +251,32 @@ Do not invent a medicine outside that list. No prices. No medical advice.`,
       });
     }
 
+    if (args.describe && typeof args.describe === 'object' && !image) {
+      const f = args.describe;
+      const facts = {
+        form: String(f.form || '').slice(0, 40),
+        salts: String(f.salts || '').slice(0, 80),
+        strength: String(f.strength || '').slice(0, 40),
+        unit: String(f.unit || '').slice(0, 40),
+        name: String(f.name || '').slice(0, 80),
+      };
+      const text = await callGemma(
+        [
+          {
+            text: `Rewrite ONLY these facts into one short, plain sentence for a patient in India.
+Facts: ${JSON.stringify(facts)}
+Say the form (tablet, capsule, powder, liquid, and so on), the salt, the strength, and the pack.
+Do not say what illness it treats. Do not give a dose, a side effect, or advice to switch.
+Reply with ONE JSON object: {"line":"..."}`,
+          },
+        ],
+        AbortSignal.timeout(8000)
+      );
+      const d = parseJson(text);
+      const line = d?.line ? String(d.line).slice(0, 220) : null;
+      return reply(200, { line });
+    }
+
     if (typeof voiceText === 'string' && voiceText.trim() && !image) {
       const out = await normaliseVoice(voiceText.trim(), signal);
       if (!out.ok) return reply(422, { error: out.error || 'unreadable' });
