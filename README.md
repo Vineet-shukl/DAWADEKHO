@@ -26,7 +26,7 @@ These are the finished pieces of the product.
 | M4 Saving | Branded price, Jan Aushadhi price, and the difference on one receipt. |
 | M5 Honest miss | Unknown names say they are not in the list. No invented price. |
 | M6 Disclaimer | Every result says to confirm with a doctor or pharmacist. |
-| M7 Stores | Nearby places named Jan Aushadhi, with distance. A tap opens that pin. |
+| M7 Stores | Nearby Jan Aushadhi Kendras from the official site list, with distance and phone. A tap opens the map. |
 | M8 Hindi and English | Header toggle, remembered on the device. |
 | M9 Offline typing | After the first load, typed search does not need a server. |
 | M10 Handwriting | Microsoft TrOCR reads the writing. The person corrects it before lookup. |
@@ -54,7 +54,7 @@ A photo is resized in the browser, read by TrOCR, then checked by Gemma. The per
 
 The receipt shows the form with a symbol (tablet, capsule, liquid, powder, injection, inhaler, cream), the pack, the drug code, and one sentence that only restates those facts.
 
-**Show shops near me** uses the phone location. `/api/stores` asks OpenStreetMap for places named Jan Aushadhi within about 25 km and sorts them by straight-line distance. A row opens Google Maps at that latitude and longitude. This is not the full government list. The official locator remains on the page: https://janaushadhi.gov.in/KendraDetails.aspx
+**Show shops near me** uses the phone location. `/api/stores` asks the Jan Aushadhi site list (`POST /api/v1/website/getAllKendraByStateDistrict`) for Kendras in the matching state, then keeps those within about 25 km. Distance is straight-line from the latitude and longitude on the record. A row opens Google Maps at that point. The phone is the contact number on the record. The row also shows the scheme-wide hours, 8 AM to 8 PM, from the PMBI FAQ. That line is not that shop’s own timetable. Open days appear only when the record includes them.
 
 The Sugam app link is the real Play Store listing: https://play.google.com/store/apps/details?id=in.gov.pmbjp
 
@@ -69,7 +69,7 @@ The Sugam app link is the real Play Store listing: https://play.google.com/store
 | Vercel | Site, `/api/read-strip`, `/api/stores` |
 | Fuse.js | Fuzzy search over bundled JSON |
 | Motion | Short entrance motion. The page is not a React app, so `framer-motion` is not bundled. |
-| OpenStreetMap Nominatim | Shop coordinates |
+| Jan Aushadhi site list | Kendra address, GPS, and phone |
 | Mukta, IBM Plex Mono | Hindi, English, and prices |
 
 ## Gemma boundary

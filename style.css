@@ -787,16 +787,26 @@ input:focus-visible {
 }
 .store-row {
   display: grid;
-  gap: 2px;
+  gap: 4px;
   padding: 12px 14px;
   border-radius: 14px;
   background: #fff7ed;
   color: #1c1917;
-  text-decoration: none;
   border: 1px solid #e7e5e4;
+}
+.store-map {
+  display: grid;
+  gap: 2px;
+  color: inherit;
+  text-decoration: none;
 }
 .store-row strong { font-size: 1.05rem; }
 .store-row span { color: #44403c; font-size: 0.95rem; }
+.store-phone {
+  color: #9a3412;
+  font-weight: 600;
+  width: fit-content;
+}
 
 /* Smooth app frame on iPhone and iPad */
 html {
@@ -849,7 +859,8 @@ main {
 }
 .btn:active,
 .chip:active,
-.store-row:active {
+.store-map:active,
+.store-phone:active {
   transform: scale(0.97);
 }
 .suggestions,
