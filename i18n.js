@@ -79,7 +79,7 @@ export const strings = {
     'err.timeout': 'That took too long. Type the name instead.',
     'err.tooBig': 'That photo is too large. Take another one.',
     'err.generic': 'Something went wrong. Please try again.',
-    'err.handwriting': 'We read printed strips and boxes — not handwriting.',
+    'err.handwriting': 'Handwriting is easy to misread. Fix every field, or type the name.',
     'err.voice':
       "We couldn't catch that. Tap the mic and try again, or type the name.",
     'list.add': 'Add to my list',
@@ -181,7 +181,7 @@ export const strings = {
     'err.timeout': 'बहुत देर लगी। नाम लिखकर खोजें।',
     'err.tooBig': 'फ़ोटो बहुत बड़ी है। नई फ़ोटो लें।',
     'err.generic': 'कुछ गड़बड़ हुई। फिर कोशिश करें।',
-    'err.handwriting': 'हम छपे पत्ते और डिब्बे पढ़ते हैं, लिखावट नहीं।',
+    'err.handwriting': 'हाथ की लिखावट गलत पढ़ सकती है। हर जगह ठीक करें, या नाम लिखें।',
     'err.voice': 'सुनाई नहीं दी। माइक दबाकर फिर बोलें, या नाम लिखें।',
     'list.add': 'मेरी सूची में जोड़ें',
     'list.total': '{n} दवाओं पर कुल बचत: {amount}',

@@ -1,17 +1,20 @@
 const MODEL = 'gemma-4-26b-a4b-it';
 const MAX_PASSES = 3;
 
-const EXTRACT_PROMPT = `You read photos of Indian medicine strips or boxes (PRINTED text only).
+const EXTRACT_PROMPT = `You read a photo of an Indian medicine strip, box, or a short handwritten prescription line.
 Return ONLY a JSON object, no other text:
 {"brand": string|null, "salts": string[], "strength": string|null,
- "form": "tablet"|"capsule"|"syrup"|"injection"|"other"|null,
- "mrp_printed": number|null, "readable": boolean, "confidence": number}
+ "form": "tablet"|"capsule"|"syrup"|"injection"|"powder"|"liquid"|"other"|null,
+ "mrp_printed": number|null, "readable": boolean, "confidence": number,
+ "handwriting": boolean}
 Rules:
-- Copy only text printed in the image. If unsure, use null.
-- Never guess a salt or price that is not printed.
+- Copy only text you can actually see. If unsure, use null.
+- Never guess a salt, brand, or price that is not in the image.
+- Printed strips are more reliable. Set handwriting=false for printed packs.
+- For handwriting, transcribe only clearly readable words, set handwriting=true, and keep confidence at or below 0.4.
+- If the handwriting is too messy to read, set readable=false and leave brand and salts empty.
 - Strength like "650mg" or "500mg+125mg".
-- confidence is 0 to 1 (how sure you are the fields match the print).
-- If handwriting (not printed packaging), set readable to false.`;
+- confidence is 0 to 1.`;
 
 const VERIFY_PROMPT = (draft) => `You are checking a previous reading of the SAME medicine strip/box photo.
 Previous JSON:
@@ -141,7 +144,8 @@ async function extractStrip(image, signal) {
     if (typeof draft.confidence === 'number' && draft.confidence >= 0.9 && i > 0) break;
   }
 
-  if (!draft || draft.readable === false) return { ok: false, error: 'unreadable', passes };
+  const hasText = Boolean(draft?.brand) || (Array.isArray(draft?.salts) && draft.salts.length > 0);
+  if (!draft || (draft.readable === false && !hasText)) return { ok: false, error: 'unreadable', passes };
   return {
     ok: true,
     passes,
@@ -152,6 +156,7 @@ async function extractStrip(image, signal) {
       form: draft.form ?? null,
       mrp_printed: typeof draft.mrp_printed === 'number' ? draft.mrp_printed : null,
       confidence: typeof draft.confidence === 'number' ? draft.confidence : null,
+      handwriting: Boolean(draft.handwriting),
       verified_passes: passes,
     },
   };

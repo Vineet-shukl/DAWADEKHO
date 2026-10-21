@@ -423,6 +423,8 @@ async function readStrip(file) {
     const data = await res.json();
     $('loading').hidden = true;
     $('confirm-card').hidden = false;
+    const hand = $('confirm-hand');
+    if (hand) hand.hidden = !data.handwriting;
     $('confirm-brand').value = data.brand || '';
     $('confirm-salt').value = Array.isArray(data.salts) ? data.salts.join(', ') : '';
     $('confirm-strength').value = data.strength || '';
