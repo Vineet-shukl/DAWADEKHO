@@ -2679,5 +2679,3596 @@
     "unit": "10's",
     "mrp": 12,
     "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "223",
+    "generic_name": "Cefpodoxime 100mg Tablets",
+    "salts": [
+      "cefpodoxime"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 28,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "224",
+    "generic_name": "Cefpodoxime 200mg Tablets",
+    "salts": [
+      "cefpodoxime"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 29.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "225",
+    "generic_name": "Ceftriaxone 250mg Injection",
+    "salts": [
+      "ceftriaxone"
+    ],
+    "strength": "250mg",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 22,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "226",
+    "generic_name": "Ceftriaxone 500mg Injection",
+    "salts": [
+      "ceftriaxone"
+    ],
+    "strength": "500mg",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 23.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "227",
+    "generic_name": "Ceftriaxone 1g Injection",
+    "salts": [
+      "ceftriaxone"
+    ],
+    "strength": "1g",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 25,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "228",
+    "generic_name": "Ampicillin 250mg Capsules",
+    "salts": [
+      "ampicillin"
+    ],
+    "strength": "250mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "229",
+    "generic_name": "Ampicillin 500mg Capsules",
+    "salts": [
+      "ampicillin"
+    ],
+    "strength": "500mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "230",
+    "generic_name": "Cloxacillin 250mg Capsules",
+    "salts": [
+      "cloxacillin"
+    ],
+    "strength": "250mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "231",
+    "generic_name": "Cloxacillin 500mg Capsules",
+    "salts": [
+      "cloxacillin"
+    ],
+    "strength": "500mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "232",
+    "generic_name": "Cotrimoxazole 480mg Tablets",
+    "salts": [
+      "cotrimoxazole"
+    ],
+    "strength": "480mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "233",
+    "generic_name": "Cotrimoxazole 960mg Tablets",
+    "salts": [
+      "cotrimoxazole"
+    ],
+    "strength": "960mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "234",
+    "generic_name": "Gentamicin 40mg Injection",
+    "salts": [
+      "gentamicin"
+    ],
+    "strength": "40mg",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 6,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "235",
+    "generic_name": "Gentamicin 80mg Injection",
+    "salts": [
+      "gentamicin"
+    ],
+    "strength": "80mg",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 7.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "236",
+    "generic_name": "Amikacin 100mg Injection",
+    "salts": [
+      "amikacin"
+    ],
+    "strength": "100mg",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 12,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "237",
+    "generic_name": "Amikacin 250mg Injection",
+    "salts": [
+      "amikacin"
+    ],
+    "strength": "250mg",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 13.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "238",
+    "generic_name": "Amikacin 500mg Injection",
+    "salts": [
+      "amikacin"
+    ],
+    "strength": "500mg",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 15,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "239",
+    "generic_name": "Meropenem 500mg Injection",
+    "salts": [
+      "meropenem"
+    ],
+    "strength": "500mg",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 180,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "240",
+    "generic_name": "Meropenem 1g Injection",
+    "salts": [
+      "meropenem"
+    ],
+    "strength": "1g",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 181.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "241",
+    "generic_name": "Piperacillin 4g Injection",
+    "salts": [
+      "piperacillin"
+    ],
+    "strength": "4g",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 90,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "242",
+    "generic_name": "Vancomycin 500mg Injection",
+    "salts": [
+      "vancomycin"
+    ],
+    "strength": "500mg",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 120,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "243",
+    "generic_name": "Vancomycin 1g Injection",
+    "salts": [
+      "vancomycin"
+    ],
+    "strength": "1g",
+    "form": "injection",
+    "unit": "1 vial",
+    "mrp": 121.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "244",
+    "generic_name": "Clindamycin 150mg Capsules",
+    "salts": [
+      "clindamycin"
+    ],
+    "strength": "150mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "245",
+    "generic_name": "Clindamycin 300mg Capsules",
+    "salts": [
+      "clindamycin"
+    ],
+    "strength": "300mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 23.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "246",
+    "generic_name": "Nitrofurantoin 50mg Tablets",
+    "salts": [
+      "nitrofurantoin"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "247",
+    "generic_name": "Fosfomycin 3g Powder",
+    "salts": [
+      "fosfomycin"
+    ],
+    "strength": "3g",
+    "form": "powder",
+    "unit": "1 sachet",
+    "mrp": 95,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "248",
+    "generic_name": "Flucloxacillin 250mg Capsules",
+    "salts": [
+      "flucloxacillin"
+    ],
+    "strength": "250mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "249",
+    "generic_name": "Flucloxacillin 500mg Capsules",
+    "salts": [
+      "flucloxacillin"
+    ],
+    "strength": "500mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 17.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "250",
+    "generic_name": "Cefadroxil 250mg Capsules",
+    "salts": [
+      "cefadroxil"
+    ],
+    "strength": "250mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "251",
+    "generic_name": "Cefadroxil 500mg Capsules",
+    "salts": [
+      "cefadroxil"
+    ],
+    "strength": "500mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 19.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "252",
+    "generic_name": "Cefdinir 300mg Tablets",
+    "salts": [
+      "cefdinir"
+    ],
+    "strength": "300mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 45,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "253",
+    "generic_name": "Cefpodoxime 50mg/5ml Syrup",
+    "salts": [
+      "cefpodoxime"
+    ],
+    "strength": "50mg/5ml",
+    "form": "syrup",
+    "unit": "30ml",
+    "mrp": 32,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "254",
+    "generic_name": "Azithromycin 200mg/5ml Syrup",
+    "salts": [
+      "azithromycin"
+    ],
+    "strength": "200mg/5ml",
+    "form": "syrup",
+    "unit": "15ml",
+    "mrp": 38,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "255",
+    "generic_name": "Amoxicillin 125mg/5ml Syrup",
+    "salts": [
+      "amoxicillin"
+    ],
+    "strength": "125mg/5ml",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 22,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "256",
+    "generic_name": "Amoxicillin 250mg/5ml Syrup",
+    "salts": [
+      "amoxicillin"
+    ],
+    "strength": "250mg/5ml",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 23.5,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "257",
+    "generic_name": "Glipizide 2.5mg Tablets",
+    "salts": [
+      "glipizide"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "258",
+    "generic_name": "Glipizide 5mg Tablets",
+    "salts": [
+      "glipizide"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7.5,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "259",
+    "generic_name": "Gliclazide 30mg Tablets",
+    "salts": [
+      "gliclazide"
+    ],
+    "strength": "30mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "260",
+    "generic_name": "Gliclazide 60mg Tablets",
+    "salts": [
+      "gliclazide"
+    ],
+    "strength": "60mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "261",
+    "generic_name": "Linagliptin 5mg Tablets",
+    "salts": [
+      "linagliptin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 48,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "262",
+    "generic_name": "Canagliflozin 100mg Tablets",
+    "salts": [
+      "canagliflozin"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 70,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "263",
+    "generic_name": "Repaglinide 0.5mg Tablets",
+    "salts": [
+      "repaglinide"
+    ],
+    "strength": "0.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "264",
+    "generic_name": "Repaglinide 1mg Tablets",
+    "salts": [
+      "repaglinide"
+    ],
+    "strength": "1mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "265",
+    "generic_name": "Repaglinide 2mg Tablets",
+    "salts": [
+      "repaglinide"
+    ],
+    "strength": "2mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "266",
+    "generic_name": "Acarbose 25mg Tablets",
+    "salts": [
+      "acarbose"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "267",
+    "generic_name": "Acarbose 50mg Tablets",
+    "salts": [
+      "acarbose"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 19.5,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "268",
+    "generic_name": "Insulin 40iu/ml Injection",
+    "salts": [
+      "insulin"
+    ],
+    "strength": "40iu/ml",
+    "form": "injection",
+    "unit": "10ml",
+    "mrp": 140,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "269",
+    "generic_name": "Carvedilol 3.125mg Tablets",
+    "salts": [
+      "carvedilol"
+    ],
+    "strength": "3.125mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "270",
+    "generic_name": "Carvedilol 6.25mg Tablets",
+    "salts": [
+      "carvedilol"
+    ],
+    "strength": "6.25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "271",
+    "generic_name": "Carvedilol 12.5mg Tablets",
+    "salts": [
+      "carvedilol"
+    ],
+    "strength": "12.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "272",
+    "generic_name": "Carvedilol 25mg Tablets",
+    "salts": [
+      "carvedilol"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "273",
+    "generic_name": "Bisoprolol 2.5mg Tablets",
+    "salts": [
+      "bisoprolol"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "274",
+    "generic_name": "Bisoprolol 5mg Tablets",
+    "salts": [
+      "bisoprolol"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "275",
+    "generic_name": "Nebivolol 2.5mg Tablets",
+    "salts": [
+      "nebivolol"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "276",
+    "generic_name": "Nebivolol 5mg Tablets",
+    "salts": [
+      "nebivolol"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 17.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "277",
+    "generic_name": "Torsemide 5mg Tablets",
+    "salts": [
+      "torsemide"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7,
+    "group": "Diuretic"
+  },
+  {
+    "code": "278",
+    "generic_name": "Torsemide 10mg Tablets",
+    "salts": [
+      "torsemide"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8.5,
+    "group": "Diuretic"
+  },
+  {
+    "code": "279",
+    "generic_name": "Torsemide 20mg Tablets",
+    "salts": [
+      "torsemide"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Diuretic"
+  },
+  {
+    "code": "280",
+    "generic_name": "Chlorthalidone 6.25mg Tablets",
+    "salts": [
+      "chlorthalidone"
+    ],
+    "strength": "6.25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Diuretic"
+  },
+  {
+    "code": "281",
+    "generic_name": "Chlorthalidone 12.5mg Tablets",
+    "salts": [
+      "chlorthalidone"
+    ],
+    "strength": "12.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7.5,
+    "group": "Diuretic"
+  },
+  {
+    "code": "282",
+    "generic_name": "Indapamide 1.5mg Tablets",
+    "salts": [
+      "indapamide"
+    ],
+    "strength": "1.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9,
+    "group": "Diuretic"
+  },
+  {
+    "code": "283",
+    "generic_name": "Warfarin 1mg Tablets",
+    "salts": [
+      "warfarin"
+    ],
+    "strength": "1mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "284",
+    "generic_name": "Warfarin 2mg Tablets",
+    "salts": [
+      "warfarin"
+    ],
+    "strength": "2mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "285",
+    "generic_name": "Warfarin 5mg Tablets",
+    "salts": [
+      "warfarin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "286",
+    "generic_name": "Rivaroxaban 10mg Tablets",
+    "salts": [
+      "rivaroxaban"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 55,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "287",
+    "generic_name": "Rivaroxaban 15mg Tablets",
+    "salts": [
+      "rivaroxaban"
+    ],
+    "strength": "15mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 56.5,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "288",
+    "generic_name": "Rivaroxaban 20mg Tablets",
+    "salts": [
+      "rivaroxaban"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 58,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "289",
+    "generic_name": "Apixaban 2.5mg Tablets",
+    "salts": [
+      "apixaban"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 60,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "290",
+    "generic_name": "Apixaban 5mg Tablets",
+    "salts": [
+      "apixaban"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 61.5,
+    "group": "Anticoagulant"
+  },
+  {
+    "code": "291",
+    "generic_name": "Isosorbide Dinitrate 5mg Tablets",
+    "salts": [
+      "isosorbide dinitrate"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Antianginal"
+  },
+  {
+    "code": "292",
+    "generic_name": "Isosorbide Dinitrate 10mg Tablets",
+    "salts": [
+      "isosorbide dinitrate"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7.5,
+    "group": "Antianginal"
+  },
+  {
+    "code": "293",
+    "generic_name": "Nicorandil 5mg Tablets",
+    "salts": [
+      "nicorandil"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antianginal"
+  },
+  {
+    "code": "294",
+    "generic_name": "Nicorandil 10mg Tablets",
+    "salts": [
+      "nicorandil"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antianginal"
+  },
+  {
+    "code": "295",
+    "generic_name": "Trimetazidine 35mg Tablets",
+    "salts": [
+      "trimetazidine"
+    ],
+    "strength": "35mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antianginal"
+  },
+  {
+    "code": "296",
+    "generic_name": "Ivabradine 5mg Tablets",
+    "salts": [
+      "ivabradine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Antianginal"
+  },
+  {
+    "code": "297",
+    "generic_name": "Sacubitril 50mg Tablets",
+    "salts": [
+      "sacubitril"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 40,
+    "group": "Cardiac"
+  },
+  {
+    "code": "298",
+    "generic_name": "Verapamil 40mg Tablets",
+    "salts": [
+      "verapamil"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "299",
+    "generic_name": "Verapamil 80mg Tablets",
+    "salts": [
+      "verapamil"
+    ],
+    "strength": "80mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "300",
+    "generic_name": "Diltiazem 30mg Tablets",
+    "salts": [
+      "diltiazem"
+    ],
+    "strength": "30mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "301",
+    "generic_name": "Diltiazem 60mg Tablets",
+    "salts": [
+      "diltiazem"
+    ],
+    "strength": "60mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "302",
+    "generic_name": "Clonidine 100mcg Tablets",
+    "salts": [
+      "clonidine"
+    ],
+    "strength": "100mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "303",
+    "generic_name": "Prazosin 2.5mg Tablets",
+    "salts": [
+      "prazosin"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "304",
+    "generic_name": "Prazosin 5mg Tablets",
+    "salts": [
+      "prazosin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11.5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "305",
+    "generic_name": "Hydralazine 25mg Tablets",
+    "salts": [
+      "hydralazine"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "306",
+    "generic_name": "Labetalol 100mg Tablets",
+    "salts": [
+      "labetalol"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "307",
+    "generic_name": "Ezetimibe 10mg Tablets",
+    "salts": [
+      "ezetimibe"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Hypolipidaemic"
+  },
+  {
+    "code": "308",
+    "generic_name": "Fenofibrate 145mg Tablets",
+    "salts": [
+      "fenofibrate"
+    ],
+    "strength": "145mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Hypolipidaemic"
+  },
+  {
+    "code": "309",
+    "generic_name": "Gemfibrozil 300mg Tablets",
+    "salts": [
+      "gemfibrozil"
+    ],
+    "strength": "300mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Hypolipidaemic"
+  },
+  {
+    "code": "310",
+    "generic_name": "Ondansetron 2mg/ml Injection",
+    "salts": [
+      "ondansetron"
+    ],
+    "strength": "2mg/ml",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 8,
+    "group": "Antiemetic"
+  },
+  {
+    "code": "311",
+    "generic_name": "Domperidone 5mg/5ml Syrup",
+    "salts": [
+      "domperidone"
+    ],
+    "strength": "5mg/5ml",
+    "form": "syrup",
+    "unit": "30ml",
+    "mrp": 16,
+    "group": "Antiemetic"
+  },
+  {
+    "code": "312",
+    "generic_name": "Sucralfate 1g Tablets",
+    "salts": [
+      "sucralfate"
+    ],
+    "strength": "1g",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Antacid/Antiulcerant"
+  },
+  {
+    "code": "313",
+    "generic_name": "Sucralfate 1g/10ml Tablets",
+    "salts": [
+      "sucralfate"
+    ],
+    "strength": "1g/10ml",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 21.5,
+    "group": "Antacid/Antiulcerant"
+  },
+  {
+    "code": "314",
+    "generic_name": "Racecadotril 100mg Capsules",
+    "salts": [
+      "racecadotril"
+    ],
+    "strength": "100mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antidiarrhoeal"
+  },
+  {
+    "code": "315",
+    "generic_name": "Ors 4.1g Powder",
+    "salts": [
+      "ors"
+    ],
+    "strength": "4.1g",
+    "form": "powder",
+    "unit": "1 sachet",
+    "mrp": 3,
+    "group": "Electrolyte"
+  },
+  {
+    "code": "316",
+    "generic_name": "Hyoscine 10mg Tablets",
+    "salts": [
+      "hyoscine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antispasmodic"
+  },
+  {
+    "code": "317",
+    "generic_name": "Itopride 50mg Tablets",
+    "salts": [
+      "itopride"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antiemetic"
+  },
+  {
+    "code": "318",
+    "generic_name": "Levosulpiride 25mg Tablets",
+    "salts": [
+      "levosulpiride"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antiemetic"
+  },
+  {
+    "code": "319",
+    "generic_name": "Mesalazine 400mg Tablets",
+    "salts": [
+      "mesalazine"
+    ],
+    "strength": "400mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 35,
+    "group": "Gastrointestinal"
+  },
+  {
+    "code": "320",
+    "generic_name": "Mesalazine 1.2g Tablets",
+    "salts": [
+      "mesalazine"
+    ],
+    "strength": "1.2g",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 36.5,
+    "group": "Gastrointestinal"
+  },
+  {
+    "code": "321",
+    "generic_name": "Lactulose 3.35g/5ml Syrup",
+    "salts": [
+      "lactulose"
+    ],
+    "strength": "3.35g/5ml",
+    "form": "syrup",
+    "unit": "100ml",
+    "mrp": 40,
+    "group": "Laxative"
+  },
+  {
+    "code": "322",
+    "generic_name": "Polyethylene Glycol 17g Powder",
+    "salts": [
+      "polyethylene glycol"
+    ],
+    "strength": "17g",
+    "form": "powder",
+    "unit": "1 sachet",
+    "mrp": 22,
+    "group": "Laxative"
+  },
+  {
+    "code": "323",
+    "generic_name": "Levosalbutamol 50mcg Inhaler",
+    "salts": [
+      "levosalbutamol"
+    ],
+    "strength": "50mcg",
+    "form": "inhaler",
+    "unit": "200 md",
+    "mrp": 55,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "324",
+    "generic_name": "Formoterol 6mcg Inhaler",
+    "salts": [
+      "formoterol"
+    ],
+    "strength": "6mcg",
+    "form": "inhaler",
+    "unit": "120 md",
+    "mrp": 40,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "325",
+    "generic_name": "Tiotropium 9mcg Inhaler",
+    "salts": [
+      "tiotropium"
+    ],
+    "strength": "9mcg",
+    "form": "inhaler",
+    "unit": "200 md",
+    "mrp": 80,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "326",
+    "generic_name": "Ipratropium 20mcg Inhaler",
+    "salts": [
+      "ipratropium"
+    ],
+    "strength": "20mcg",
+    "form": "inhaler",
+    "unit": "200 md",
+    "mrp": 48,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "327",
+    "generic_name": "Budesonide 0.5mg Solution",
+    "salts": [
+      "budesonide"
+    ],
+    "strength": "0.5mg",
+    "form": "solution",
+    "unit": "2ml",
+    "mrp": 18,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "328",
+    "generic_name": "Montelukast 4mg Tablets",
+    "salts": [
+      "montelukast"
+    ],
+    "strength": "4mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "329",
+    "generic_name": "Ambroxol 15mg/5ml Syrup",
+    "salts": [
+      "ambroxol"
+    ],
+    "strength": "15mg/5ml",
+    "form": "syrup",
+    "unit": "100ml",
+    "mrp": 22,
+    "group": "Expectorant"
+  },
+  {
+    "code": "330",
+    "generic_name": "Bromhexine 4mg Tablets",
+    "salts": [
+      "bromhexine"
+    ],
+    "strength": "4mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Expectorant"
+  },
+  {
+    "code": "331",
+    "generic_name": "Bromhexine 8mg Tablets",
+    "salts": [
+      "bromhexine"
+    ],
+    "strength": "8mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7.5,
+    "group": "Expectorant"
+  },
+  {
+    "code": "332",
+    "generic_name": "Dextromethorphan 10mg Tablets",
+    "salts": [
+      "dextromethorphan"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Cold/Cough"
+  },
+  {
+    "code": "333",
+    "generic_name": "Phenylephrine 10mg Tablets",
+    "salts": [
+      "phenylephrine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 4,
+    "group": "Cold/Cough"
+  },
+  {
+    "code": "334",
+    "generic_name": "Cetirizine 5mg/5ml Syrup",
+    "salts": [
+      "cetirizine"
+    ],
+    "strength": "5mg/5ml",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 18,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "335",
+    "generic_name": "Levocetirizine 2.5mg/5ml Syrup",
+    "salts": [
+      "levocetirizine"
+    ],
+    "strength": "2.5mg/5ml",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 20,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "336",
+    "generic_name": "Fexofenadine 60mg Tablets",
+    "salts": [
+      "fexofenadine"
+    ],
+    "strength": "60mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "337",
+    "generic_name": "Hydroxyzine 10mg Tablets",
+    "salts": [
+      "hydroxyzine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "338",
+    "generic_name": "Hydroxyzine 25mg Tablets",
+    "salts": [
+      "hydroxyzine"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "339",
+    "generic_name": "Bilastine 20mg Tablets",
+    "salts": [
+      "bilastine"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "340",
+    "generic_name": "Olanzapine 2.5mg Tablets",
+    "salts": [
+      "olanzapine"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "341",
+    "generic_name": "Olanzapine 5mg Tablets",
+    "salts": [
+      "olanzapine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "342",
+    "generic_name": "Olanzapine 10mg Tablets",
+    "salts": [
+      "olanzapine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "343",
+    "generic_name": "Risperidone 1mg Tablets",
+    "salts": [
+      "risperidone"
+    ],
+    "strength": "1mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "344",
+    "generic_name": "Risperidone 2mg Tablets",
+    "salts": [
+      "risperidone"
+    ],
+    "strength": "2mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11.5,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "345",
+    "generic_name": "Quetiapine 25mg Tablets",
+    "salts": [
+      "quetiapine"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "346",
+    "generic_name": "Quetiapine 50mg Tablets",
+    "salts": [
+      "quetiapine"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "347",
+    "generic_name": "Quetiapine 100mg Tablets",
+    "salts": [
+      "quetiapine"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 17,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "348",
+    "generic_name": "Aripiprazole 5mg Tablets",
+    "salts": [
+      "aripiprazole"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "349",
+    "generic_name": "Aripiprazole 10mg Tablets",
+    "salts": [
+      "aripiprazole"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 19.5,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "350",
+    "generic_name": "Aripiprazole 15mg Tablets",
+    "salts": [
+      "aripiprazole"
+    ],
+    "strength": "15mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 21,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "351",
+    "generic_name": "Haloperidol 1.5mg Tablets",
+    "salts": [
+      "haloperidol"
+    ],
+    "strength": "1.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "352",
+    "generic_name": "Haloperidol 5mg Tablets",
+    "salts": [
+      "haloperidol"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 7.5,
+    "group": "Antipsychotic"
+  },
+  {
+    "code": "353",
+    "generic_name": "Lithium 300mg Tablets",
+    "salts": [
+      "lithium"
+    ],
+    "strength": "300mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Mood stabiliser"
+  },
+  {
+    "code": "354",
+    "generic_name": "Amitriptyline 50mg Tablets",
+    "salts": [
+      "amitriptyline"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "355",
+    "generic_name": "Amitriptyline 75mg Tablets",
+    "salts": [
+      "amitriptyline"
+    ],
+    "strength": "75mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 9.5,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "356",
+    "generic_name": "Duloxetine 20mg Capsules",
+    "salts": [
+      "duloxetine"
+    ],
+    "strength": "20mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "357",
+    "generic_name": "Duloxetine 30mg Capsules",
+    "salts": [
+      "duloxetine"
+    ],
+    "strength": "30mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 17.5,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "358",
+    "generic_name": "Duloxetine 60mg Capsules",
+    "salts": [
+      "duloxetine"
+    ],
+    "strength": "60mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 19,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "359",
+    "generic_name": "Venlafaxine 37.5mg Capsules",
+    "salts": [
+      "venlafaxine"
+    ],
+    "strength": "37.5mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 15,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "360",
+    "generic_name": "Venlafaxine 75mg Capsules",
+    "salts": [
+      "venlafaxine"
+    ],
+    "strength": "75mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 16.5,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "361",
+    "generic_name": "Mirtazapine 7.5mg Tablets",
+    "salts": [
+      "mirtazapine"
+    ],
+    "strength": "7.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "362",
+    "generic_name": "Mirtazapine 15mg Tablets",
+    "salts": [
+      "mirtazapine"
+    ],
+    "strength": "15mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antidepressant"
+  },
+  {
+    "code": "363",
+    "generic_name": "Donepezil 5mg Tablets",
+    "salts": [
+      "donepezil"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Neurology"
+  },
+  {
+    "code": "364",
+    "generic_name": "Donepezil 10mg Tablets",
+    "salts": [
+      "donepezil"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 21.5,
+    "group": "Neurology"
+  },
+  {
+    "code": "365",
+    "generic_name": "Memantine 5mg Tablets",
+    "salts": [
+      "memantine"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Neurology"
+  },
+  {
+    "code": "366",
+    "generic_name": "Memantine 10mg Tablets",
+    "salts": [
+      "memantine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 19.5,
+    "group": "Neurology"
+  },
+  {
+    "code": "367",
+    "generic_name": "Levodopa 100mg Tablets",
+    "salts": [
+      "levodopa"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Neurology"
+  },
+  {
+    "code": "368",
+    "generic_name": "Pramipexole 0.25mg Tablets",
+    "salts": [
+      "pramipexole"
+    ],
+    "strength": "0.25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Neurology"
+  },
+  {
+    "code": "369",
+    "generic_name": "Pramipexole 0.5mg Tablets",
+    "salts": [
+      "pramipexole"
+    ],
+    "strength": "0.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 23.5,
+    "group": "Neurology"
+  },
+  {
+    "code": "370",
+    "generic_name": "Sumatriptan 25mg Tablets",
+    "salts": [
+      "sumatriptan"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Neurology"
+  },
+  {
+    "code": "371",
+    "generic_name": "Sumatriptan 50mg Tablets",
+    "salts": [
+      "sumatriptan"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 19.5,
+    "group": "Neurology"
+  },
+  {
+    "code": "372",
+    "generic_name": "Propranolol 20mg Tablets",
+    "salts": [
+      "propranolol"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "373",
+    "generic_name": "Topiramate 25mg Tablets",
+    "salts": [
+      "topiramate"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "374",
+    "generic_name": "Topiramate 50mg Tablets",
+    "salts": [
+      "topiramate"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "375",
+    "generic_name": "Lamotrigine 25mg Tablets",
+    "salts": [
+      "lamotrigine"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "376",
+    "generic_name": "Lamotrigine 50mg Tablets",
+    "salts": [
+      "lamotrigine"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 17.5,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "377",
+    "generic_name": "Lamotrigine 100mg Tablets",
+    "salts": [
+      "lamotrigine"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 19,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "378",
+    "generic_name": "Phenytoin 100mg Tablets",
+    "salts": [
+      "phenytoin"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "379",
+    "generic_name": "Clobazam 5mg Tablets",
+    "salts": [
+      "clobazam"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "380",
+    "generic_name": "Clobazam 10mg Tablets",
+    "salts": [
+      "clobazam"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "381",
+    "generic_name": "Levetiracetam 250mg Tablets",
+    "salts": [
+      "levetiracetam"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 30,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "382",
+    "generic_name": "Levetiracetam 750mg Tablets",
+    "salts": [
+      "levetiracetam"
+    ],
+    "strength": "750mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 31.5,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "383",
+    "generic_name": "Sodium Valproate 200mg/5ml Syrup",
+    "salts": [
+      "sodium valproate"
+    ],
+    "strength": "200mg/5ml",
+    "form": "syrup",
+    "unit": "100ml",
+    "mrp": 28,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "384",
+    "generic_name": "Pregabalin 50mg Capsules",
+    "salts": [
+      "pregabalin"
+    ],
+    "strength": "50mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "385",
+    "generic_name": "Gabapentin 400mg Capsules",
+    "salts": [
+      "gabapentin"
+    ],
+    "strength": "400mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Antiepileptic"
+  },
+  {
+    "code": "386",
+    "generic_name": "Tranexamic Acid 500mg Tablets",
+    "salts": [
+      "tranexamic acid"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Haemostatic"
+  },
+  {
+    "code": "387",
+    "generic_name": "Norethisterone 5mg Tablets",
+    "salts": [
+      "norethisterone"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "388",
+    "generic_name": "Medroxyprogesterone 10mg Tablets",
+    "salts": [
+      "medroxyprogesterone"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "389",
+    "generic_name": "Dydrogesterone 10mg Tablets",
+    "salts": [
+      "dydrogesterone"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 40,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "390",
+    "generic_name": "Mifepristone 200mg Tablets",
+    "salts": [
+      "mifepristone"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 35,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "391",
+    "generic_name": "Misoprostol 200mcg Tablets",
+    "salts": [
+      "misoprostol"
+    ],
+    "strength": "200mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "392",
+    "generic_name": "Ethinylestradiol 0.03mg Tablets",
+    "salts": [
+      "ethinylestradiol"
+    ],
+    "strength": "0.03mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "393",
+    "generic_name": "Letrozole 2.5mg Tablets",
+    "salts": [
+      "letrozole"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "394",
+    "generic_name": "Clomifene 50mg Tablets",
+    "salts": [
+      "clomifene"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Gynaecology"
+  },
+  {
+    "code": "395",
+    "generic_name": "Tamsulosin 0.2mg Capsules",
+    "salts": [
+      "tamsulosin"
+    ],
+    "strength": "0.2mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Urology"
+  },
+  {
+    "code": "396",
+    "generic_name": "Alfuzosin 10mg Tablets",
+    "salts": [
+      "alfuzosin"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Urology"
+  },
+  {
+    "code": "397",
+    "generic_name": "Dutasteride 0.5mg Capsules",
+    "salts": [
+      "dutasteride"
+    ],
+    "strength": "0.5mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Urology"
+  },
+  {
+    "code": "398",
+    "generic_name": "Solifenacin 5mg Tablets",
+    "salts": [
+      "solifenacin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 24,
+    "group": "Urology"
+  },
+  {
+    "code": "399",
+    "generic_name": "Mirabegron 25mg Tablets",
+    "salts": [
+      "mirabegron"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 30,
+    "group": "Urology"
+  },
+  {
+    "code": "400",
+    "generic_name": "Mirabegron 50mg Tablets",
+    "salts": [
+      "mirabegron"
+    ],
+    "strength": "50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 31.5,
+    "group": "Urology"
+  },
+  {
+    "code": "401",
+    "generic_name": "Potassium Citrate 1100mg Tablets",
+    "salts": [
+      "potassium citrate"
+    ],
+    "strength": "1100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Urology"
+  },
+  {
+    "code": "402",
+    "generic_name": "Timolol 0.5% Solution",
+    "salts": [
+      "timolol"
+    ],
+    "strength": "0.5%",
+    "form": "solution",
+    "unit": "5ml",
+    "mrp": 18,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "403",
+    "generic_name": "Latanoprost 0.005% Solution",
+    "salts": [
+      "latanoprost"
+    ],
+    "strength": "0.005%",
+    "form": "solution",
+    "unit": "2.5ml",
+    "mrp": 45,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "404",
+    "generic_name": "Moxifloxacin 0.5% Solution",
+    "salts": [
+      "moxifloxacin"
+    ],
+    "strength": "0.5%",
+    "form": "solution",
+    "unit": "5ml",
+    "mrp": 28,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "405",
+    "generic_name": "Ofloxacin 0.3% Solution",
+    "salts": [
+      "ofloxacin"
+    ],
+    "strength": "0.3%",
+    "form": "solution",
+    "unit": "5ml",
+    "mrp": 16,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "406",
+    "generic_name": "Carboxymethylcellulose 0.5% Solution",
+    "salts": [
+      "carboxymethylcellulose"
+    ],
+    "strength": "0.5%",
+    "form": "solution",
+    "unit": "10ml",
+    "mrp": 20,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "407",
+    "generic_name": "Olopatadine 0.1% Solution",
+    "salts": [
+      "olopatadine"
+    ],
+    "strength": "0.1%",
+    "form": "solution",
+    "unit": "5ml",
+    "mrp": 22,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "408",
+    "generic_name": "Ciprofloxacin 0.3% Solution",
+    "salts": [
+      "ciprofloxacin"
+    ],
+    "strength": "0.3%",
+    "form": "solution",
+    "unit": "5ml",
+    "mrp": 12,
+    "group": "Ophthalmic"
+  },
+  {
+    "code": "409",
+    "generic_name": "Adapalene 0.1% Gel",
+    "salts": [
+      "adapalene"
+    ],
+    "strength": "0.1%",
+    "form": "gel",
+    "unit": "15g",
+    "mrp": 30,
+    "group": "Dermatology"
+  },
+  {
+    "code": "410",
+    "generic_name": "Clindamycin 1% Gel",
+    "salts": [
+      "clindamycin"
+    ],
+    "strength": "1%",
+    "form": "gel",
+    "unit": "15g",
+    "mrp": 24,
+    "group": "Dermatology"
+  },
+  {
+    "code": "411",
+    "generic_name": "Fusidic Acid 2% Cream",
+    "salts": [
+      "fusidic acid"
+    ],
+    "strength": "2%",
+    "form": "cream",
+    "unit": "10g",
+    "mrp": 28,
+    "group": "Dermatology"
+  },
+  {
+    "code": "412",
+    "generic_name": "Ketoconazole 2% Cream",
+    "salts": [
+      "ketoconazole"
+    ],
+    "strength": "2%",
+    "form": "cream",
+    "unit": "15g",
+    "mrp": 22,
+    "group": "Dermatology"
+  },
+  {
+    "code": "413",
+    "generic_name": "Terbinafine 1% Cream",
+    "salts": [
+      "terbinafine"
+    ],
+    "strength": "1%",
+    "form": "cream",
+    "unit": "15g",
+    "mrp": 26,
+    "group": "Dermatology"
+  },
+  {
+    "code": "414",
+    "generic_name": "Mometasone 0.1% Cream",
+    "salts": [
+      "mometasone"
+    ],
+    "strength": "0.1%",
+    "form": "cream",
+    "unit": "15g",
+    "mrp": 24,
+    "group": "Dermatology"
+  },
+  {
+    "code": "415",
+    "generic_name": "Permethrin 5% Cream",
+    "salts": [
+      "permethrin"
+    ],
+    "strength": "5%",
+    "form": "cream",
+    "unit": "30g",
+    "mrp": 20,
+    "group": "Dermatology"
+  },
+  {
+    "code": "416",
+    "generic_name": "Calamine 8% Cream",
+    "salts": [
+      "calamine"
+    ],
+    "strength": "8%",
+    "form": "cream",
+    "unit": "50g",
+    "mrp": 12,
+    "group": "Dermatology"
+  },
+  {
+    "code": "417",
+    "generic_name": "Whitfield 3% Ointment",
+    "salts": [
+      "whitfield"
+    ],
+    "strength": "3%",
+    "form": "ointment",
+    "unit": "15g",
+    "mrp": 10,
+    "group": "Dermatology"
+  },
+  {
+    "code": "418",
+    "generic_name": "Calcium Carbonate 250mg Tablets",
+    "salts": [
+      "calcium carbonate"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Mineral"
+  },
+  {
+    "code": "419",
+    "generic_name": "Cholecalciferol 1000iu Tablets",
+    "salts": [
+      "cholecalciferol"
+    ],
+    "strength": "1000iu",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Vitamin"
+  },
+  {
+    "code": "420",
+    "generic_name": "Cholecalciferol 2000iu Tablets",
+    "salts": [
+      "cholecalciferol"
+    ],
+    "strength": "2000iu",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 11.5,
+    "group": "Vitamin"
+  },
+  {
+    "code": "421",
+    "generic_name": "Folic Acid 1mg Tablets",
+    "salts": [
+      "folic acid"
+    ],
+    "strength": "1mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 3,
+    "group": "Vitamin"
+  },
+  {
+    "code": "422",
+    "generic_name": "Ferrous Ascorbate 100mg Tablets",
+    "salts": [
+      "ferrous ascorbate"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Haematinic"
+  },
+  {
+    "code": "423",
+    "generic_name": "Zinc Sulphate 10mg Tablets",
+    "salts": [
+      "zinc sulphate"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 4,
+    "group": "Mineral"
+  },
+  {
+    "code": "424",
+    "generic_name": "Magnesium 250mg Tablets",
+    "salts": [
+      "magnesium"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Mineral"
+  },
+  {
+    "code": "425",
+    "generic_name": "Vitamin B12 500mcg Tablets",
+    "salts": [
+      "vitamin b12"
+    ],
+    "strength": "500mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Vitamin"
+  },
+  {
+    "code": "426",
+    "generic_name": "Thiamine 100mg Tablets",
+    "salts": [
+      "thiamine"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Vitamin"
+  },
+  {
+    "code": "427",
+    "generic_name": "Pyridoxine 40mg Tablets",
+    "salts": [
+      "pyridoxine"
+    ],
+    "strength": "40mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Vitamin"
+  },
+  {
+    "code": "428",
+    "generic_name": "Biotin 5mg Tablets",
+    "salts": [
+      "biotin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Vitamin"
+  },
+  {
+    "code": "429",
+    "generic_name": "Omega 3 1000mg Capsules",
+    "salts": [
+      "omega 3"
+    ],
+    "strength": "1000mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Supplement"
+  },
+  {
+    "code": "430",
+    "generic_name": "Acyclovir 200mg Tablets",
+    "salts": [
+      "acyclovir"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Antiviral"
+  },
+  {
+    "code": "431",
+    "generic_name": "Oseltamivir 75mg Capsules",
+    "salts": [
+      "oseltamivir"
+    ],
+    "strength": "75mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 45,
+    "group": "Antiviral"
+  },
+  {
+    "code": "432",
+    "generic_name": "Valacyclovir 500mg Tablets",
+    "salts": [
+      "valacyclovir"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 40,
+    "group": "Antiviral"
+  },
+  {
+    "code": "433",
+    "generic_name": "Valacyclovir 1000mg Tablets",
+    "salts": [
+      "valacyclovir"
+    ],
+    "strength": "1000mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 41.5,
+    "group": "Antiviral"
+  },
+  {
+    "code": "434",
+    "generic_name": "Fluconazole 50mg Capsules",
+    "salts": [
+      "fluconazole"
+    ],
+    "strength": "50mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Antifungal"
+  },
+  {
+    "code": "435",
+    "generic_name": "Griseofulvin 250mg Tablets",
+    "salts": [
+      "griseofulvin"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antifungal"
+  },
+  {
+    "code": "436",
+    "generic_name": "Nystatin 100000iu/ml Solution",
+    "salts": [
+      "nystatin"
+    ],
+    "strength": "100000iu/ml",
+    "form": "solution",
+    "unit": "30ml",
+    "mrp": 18,
+    "group": "Antifungal"
+  },
+  {
+    "code": "437",
+    "generic_name": "Albendazole 200mg/5ml Syrup",
+    "salts": [
+      "albendazole"
+    ],
+    "strength": "200mg/5ml",
+    "form": "syrup",
+    "unit": "10ml",
+    "mrp": 12,
+    "group": "Anthelmintic"
+  },
+  {
+    "code": "438",
+    "generic_name": "Ivermectin 6mg Tablets",
+    "salts": [
+      "ivermectin"
+    ],
+    "strength": "6mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Anthelmintic"
+  },
+  {
+    "code": "439",
+    "generic_name": "Diethylcarbamazine 100mg Tablets",
+    "salts": [
+      "diethylcarbamazine"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Anthelmintic"
+  },
+  {
+    "code": "440",
+    "generic_name": "Praziquantel 600mg Tablets",
+    "salts": [
+      "praziquantel"
+    ],
+    "strength": "600mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Anthelmintic"
+  },
+  {
+    "code": "441",
+    "generic_name": "Allopurinol 200mg Tablets",
+    "salts": [
+      "allopurinol"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Antigout"
+  },
+  {
+    "code": "442",
+    "generic_name": "Colchicine 0.5mg Tablets",
+    "salts": [
+      "colchicine"
+    ],
+    "strength": "0.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Antigout"
+  },
+  {
+    "code": "443",
+    "generic_name": "Prednisolone 20mg Tablets",
+    "salts": [
+      "prednisolone"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 10,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "444",
+    "generic_name": "Deflazacort 6mg Tablets",
+    "salts": [
+      "deflazacort"
+    ],
+    "strength": "6mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "445",
+    "generic_name": "Deflazacort 30mg Tablets",
+    "salts": [
+      "deflazacort"
+    ],
+    "strength": "30mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15.5,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "446",
+    "generic_name": "Methylprednisolone 4mg Tablets",
+    "salts": [
+      "methylprednisolone"
+    ],
+    "strength": "4mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "447",
+    "generic_name": "Methylprednisolone 8mg Tablets",
+    "salts": [
+      "methylprednisolone"
+    ],
+    "strength": "8mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "448",
+    "generic_name": "Methylprednisolone 16mg Tablets",
+    "salts": [
+      "methylprednisolone"
+    ],
+    "strength": "16mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 15,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "449",
+    "generic_name": "Hydrocortisone 10mg Tablets",
+    "salts": [
+      "hydrocortisone"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Corticosteroid"
+  },
+  {
+    "code": "450",
+    "generic_name": "Levothyroxine 12.5mcg Tablets",
+    "salts": [
+      "levothyroxine"
+    ],
+    "strength": "12.5mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Thyroid"
+  },
+  {
+    "code": "451",
+    "generic_name": "Levothyroxine 88mcg Tablets",
+    "salts": [
+      "levothyroxine"
+    ],
+    "strength": "88mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 21.5,
+    "group": "Thyroid"
+  },
+  {
+    "code": "452",
+    "generic_name": "Levothyroxine 150mcg Tablets",
+    "salts": [
+      "levothyroxine"
+    ],
+    "strength": "150mcg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 23,
+    "group": "Thyroid"
+  },
+  {
+    "code": "453",
+    "generic_name": "Carbimazole 20mg Tablets",
+    "salts": [
+      "carbimazole"
+    ],
+    "strength": "20mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Thyroid"
+  },
+  {
+    "code": "454",
+    "generic_name": "Methimazole 5mg Tablets",
+    "salts": [
+      "methimazole"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Thyroid"
+  },
+  {
+    "code": "455",
+    "generic_name": "Methimazole 10mg Tablets",
+    "salts": [
+      "methimazole"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 13.5,
+    "group": "Thyroid"
+  },
+  {
+    "code": "456",
+    "generic_name": "Paracetamol 150mg/ml Injection",
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "150mg/ml",
+    "form": "injection",
+    "unit": "2ml",
+    "mrp": 8,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "457",
+    "generic_name": "Paracetamol 250mg Tablets",
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 4,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "458",
+    "generic_name": "Paracetamol 1000mg Tablets",
+    "salts": [
+      "paracetamol"
+    ],
+    "strength": "1000mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "459",
+    "generic_name": "Ibuprofen 100mg/5ml Syrup",
+    "salts": [
+      "ibuprofen"
+    ],
+    "strength": "100mg/5ml",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 16,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "460",
+    "generic_name": "Diclofenac 25mg Tablets",
+    "salts": [
+      "diclofenac"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "461",
+    "generic_name": "Aceclofenac 200mg Tablets",
+    "salts": [
+      "aceclofenac"
+    ],
+    "strength": "200mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "462",
+    "generic_name": "Etoricoxib 120mg Tablets",
+    "salts": [
+      "etoricoxib"
+    ],
+    "strength": "120mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "463",
+    "generic_name": "Tramadol 100mg Tablets",
+    "salts": [
+      "tramadol"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "464",
+    "generic_name": "Aspirin 325mg Tablets",
+    "salts": [
+      "aspirin"
+    ],
+    "strength": "325mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "465",
+    "generic_name": "Nimesulide 100mg Tablets",
+    "salts": [
+      "nimesulide"
+    ],
+    "strength": "100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "466",
+    "generic_name": "Amoxicillin 875mg and Clavulanic Acid 125mg Tablets",
+    "salts": [
+      "amoxicillin",
+      "clavulanic acid"
+    ],
+    "strength": "875mg+125mg",
+    "form": "tablet",
+    "unit": "6's",
+    "mrp": 62,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "467",
+    "generic_name": "Cefpodoxime 200mg and Clavulanic Acid 125mg Tablets",
+    "salts": [
+      "cefpodoxime",
+      "clavulanic acid"
+    ],
+    "strength": "200mg+125mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 85,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "468",
+    "generic_name": "Glimepiride 1mg and Metformin 1000mg Tablets",
+    "salts": [
+      "glimepiride",
+      "metformin"
+    ],
+    "strength": "1mg+1000mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "469",
+    "generic_name": "Glimepiride 2mg and Metformin 1000mg Tablets",
+    "salts": [
+      "glimepiride",
+      "metformin"
+    ],
+    "strength": "2mg+1000mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "470",
+    "generic_name": "Teneligliptin 20mg and Metformin 500mg Tablets",
+    "salts": [
+      "teneligliptin",
+      "metformin"
+    ],
+    "strength": "20mg+500mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 32,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "471",
+    "generic_name": "Sitagliptin 50mg and Metformin 500mg Tablets",
+    "salts": [
+      "sitagliptin",
+      "metformin"
+    ],
+    "strength": "50mg+500mg",
+    "form": "tablet",
+    "unit": "7's",
+    "mrp": 48,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "472",
+    "generic_name": "Telmisartan 40mg and Chlorthalidone 12.5mg Tablets",
+    "salts": [
+      "telmisartan",
+      "chlorthalidone"
+    ],
+    "strength": "40mg+12.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "473",
+    "generic_name": "Amlodipine 5mg and Atenolol 50mg Tablets",
+    "salts": [
+      "amlodipine",
+      "atenolol"
+    ],
+    "strength": "5mg+50mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "474",
+    "generic_name": "Losartan 50mg and Amlodipine 5mg Tablets",
+    "salts": [
+      "losartan",
+      "amlodipine"
+    ],
+    "strength": "50mg+5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "475",
+    "generic_name": "Atorvastatin 10mg and Aspirin 75mg Capsules",
+    "salts": [
+      "atorvastatin",
+      "aspirin"
+    ],
+    "strength": "10mg+75mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Hypolipidaemic"
+  },
+  {
+    "code": "476",
+    "generic_name": "Rosuvastatin 10mg and Aspirin 75mg Capsules",
+    "salts": [
+      "rosuvastatin",
+      "aspirin"
+    ],
+    "strength": "10mg+75mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 28,
+    "group": "Hypolipidaemic"
+  },
+  {
+    "code": "477",
+    "generic_name": "Montelukast 10mg and Fexofenadine 120mg Tablets",
+    "salts": [
+      "montelukast",
+      "fexofenadine"
+    ],
+    "strength": "10mg+120mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 30,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "478",
+    "generic_name": "Ambroxol 30mg and Guaifenesin 50mg and Terbutaline 1.25mg Syrup",
+    "salts": [
+      "ambroxol",
+      "guaifenesin",
+      "terbutaline"
+    ],
+    "strength": "30mg+50mg+1.25mg",
+    "form": "syrup",
+    "unit": "100ml",
+    "mrp": 42,
+    "group": "Expectorant"
+  },
+  {
+    "code": "479",
+    "generic_name": "Diclofenac 50mg and Paracetamol 325mg Tablets",
+    "salts": [
+      "diclofenac",
+      "paracetamol"
+    ],
+    "strength": "50mg+325mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 8,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "480",
+    "generic_name": "Tramadol 37.5mg and Paracetamol 325mg Tablets",
+    "salts": [
+      "tramadol",
+      "paracetamol"
+    ],
+    "strength": "37.5mg+325mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "481",
+    "generic_name": "Ofloxacin 200mg and Ornidazole 500mg Tablets",
+    "salts": [
+      "ofloxacin",
+      "ornidazole"
+    ],
+    "strength": "200mg+500mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "482",
+    "generic_name": "Norfloxacin 400mg and Tinidazole 600mg Tablets",
+    "salts": [
+      "norfloxacin",
+      "tinidazole"
+    ],
+    "strength": "400mg+600mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antibacterial"
+  },
+  {
+    "code": "483",
+    "generic_name": "Artemether 80mg and Lumefantrine 480mg Tablets",
+    "salts": [
+      "artemether",
+      "lumefantrine"
+    ],
+    "strength": "80mg+480mg",
+    "form": "tablet",
+    "unit": "6's",
+    "mrp": 48,
+    "group": "Antimalarial"
+  },
+  {
+    "code": "484",
+    "generic_name": "Artesunate 100mg and Sulfadoxine 500mg and Pyrimethamine 25mg",
+    "salts": [
+      "artesunate",
+      "sulfadoxine",
+      "pyrimethamine"
+    ],
+    "strength": "100mg+500mg+25mg",
+    "form": "tablet",
+    "unit": "1 kit",
+    "mrp": 30,
+    "group": "Antimalarial"
+  },
+  {
+    "code": "485",
+    "generic_name": "Chloroquine 250mg Tablets",
+    "salts": [
+      "chloroquine"
+    ],
+    "strength": "250mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Antimalarial"
+  },
+  {
+    "code": "486",
+    "generic_name": "Primaquine 7.5mg Tablets",
+    "salts": [
+      "primaquine"
+    ],
+    "strength": "7.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 5,
+    "group": "Antimalarial"
+  },
+  {
+    "code": "487",
+    "generic_name": "Hydroxychloroquine 400mg Tablets",
+    "salts": [
+      "hydroxychloroquine"
+    ],
+    "strength": "400mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 36,
+    "group": "DMARD"
+  },
+  {
+    "code": "488",
+    "generic_name": "Sulfasalazine 500mg Tablets",
+    "salts": [
+      "sulfasalazine"
+    ],
+    "strength": "500mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "DMARD"
+  },
+  {
+    "code": "489",
+    "generic_name": "Leflunomide 10mg Tablets",
+    "salts": [
+      "leflunomide"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "DMARD"
+  },
+  {
+    "code": "490",
+    "generic_name": "Methotrexate 7.5mg Tablets",
+    "salts": [
+      "methotrexate"
+    ],
+    "strength": "7.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 24,
+    "group": "DMARD"
+  },
+  {
+    "code": "491",
+    "generic_name": "Calcium 500mg and Vitamin D3 500 IU Tablets",
+    "salts": [
+      "calcium carbonate",
+      "cholecalciferol"
+    ],
+    "strength": "500mg+500iu",
+    "form": "tablet",
+    "unit": "15's",
+    "mrp": 22,
+    "group": "Mineral"
+  },
+  {
+    "code": "492",
+    "generic_name": "Ferrous Sulphate 200mg and Folic Acid 0.5mg Tablets",
+    "salts": [
+      "ferrous sulphate",
+      "folic acid"
+    ],
+    "strength": "200mg+0.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 6,
+    "group": "Haematinic"
+  },
+  {
+    "code": "493",
+    "generic_name": "Budesonide 200mcg and Formoterol 6mcg Inhaler",
+    "salts": [
+      "budesonide",
+      "formoterol"
+    ],
+    "strength": "200mcg+6mcg",
+    "form": "inhaler",
+    "unit": "120 md",
+    "mrp": 110,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "494",
+    "generic_name": "Salbutamol 100mcg and Ipratropium 20mcg Inhaler",
+    "salts": [
+      "salbutamol",
+      "ipratropium"
+    ],
+    "strength": "100mcg+20mcg",
+    "form": "inhaler",
+    "unit": "200 md",
+    "mrp": 75,
+    "group": "Antiasthmatic"
+  },
+  {
+    "code": "495",
+    "generic_name": "Pantoprazole 40mg and Itopride 150mg Capsules",
+    "salts": [
+      "pantoprazole",
+      "itopride"
+    ],
+    "strength": "40mg+150mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 28,
+    "group": "Antacid/Antiulcerant"
+  },
+  {
+    "code": "496",
+    "generic_name": "Rabeprazole 20mg and Itopride 150mg Capsules",
+    "salts": [
+      "rabeprazole",
+      "itopride"
+    ],
+    "strength": "20mg+150mg",
+    "form": "capsule",
+    "unit": "10's",
+    "mrp": 26,
+    "group": "Antacid/Antiulcerant"
+  },
+  {
+    "code": "497",
+    "generic_name": "Telmisartan 80mg and Amlodipine 5mg Tablets",
+    "salts": [
+      "telmisartan",
+      "amlodipine"
+    ],
+    "strength": "80mg+5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 26,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "498",
+    "generic_name": "Metoprolol 25mg and Telmisartan 40mg Tablets",
+    "salts": [
+      "metoprolol",
+      "telmisartan"
+    ],
+    "strength": "25mg+40mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 22,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "499",
+    "generic_name": "Cilnidipine 10mg Tablets",
+    "salts": [
+      "cilnidipine"
+    ],
+    "strength": "10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 14,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "500",
+    "generic_name": "Cilnidipine 10mg and Telmisartan 40mg Tablets",
+    "salts": [
+      "cilnidipine",
+      "telmisartan"
+    ],
+    "strength": "10mg+40mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 24,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "501",
+    "generic_name": "S-Amlodipine 2.5mg Tablets",
+    "salts": [
+      "s-amlodipine"
+    ],
+    "strength": "2.5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 12,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "502",
+    "generic_name": "Bisoprolol 5mg and Amlodipine 5mg Tablets",
+    "salts": [
+      "bisoprolol",
+      "amlodipine"
+    ],
+    "strength": "5mg+5mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 18,
+    "group": "Antihypertensive"
+  },
+  {
+    "code": "503",
+    "generic_name": "Empagliflozin 25mg Tablets",
+    "salts": [
+      "empagliflozin"
+    ],
+    "strength": "25mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 85,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "504",
+    "generic_name": "Dapagliflozin 5mg Tablets",
+    "salts": [
+      "dapagliflozin"
+    ],
+    "strength": "5mg",
+    "form": "tablet",
+    "unit": "14's",
+    "mrp": 48,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "505",
+    "generic_name": "Vildagliptin 50mg and Metformin 500mg Tablets",
+    "salts": [
+      "vildagliptin",
+      "metformin"
+    ],
+    "strength": "50mg+500mg",
+    "form": "tablet",
+    "unit": "15's",
+    "mrp": 42,
+    "group": "Antidiabetic"
+  },
+  {
+    "code": "506",
+    "generic_name": "Levocetirizine 5mg and Montelukast 10mg Tablets",
+    "salts": [
+      "levocetirizine",
+      "montelukast"
+    ],
+    "strength": "5mg+10mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 20,
+    "group": "Antihistamine"
+  },
+  {
+    "code": "507",
+    "generic_name": "Aceclofenac 100mg and Serratiopeptidase 15mg Tablets",
+    "salts": [
+      "aceclofenac",
+      "serratiopeptidase"
+    ],
+    "strength": "100mg+15mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 16,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "508",
+    "generic_name": "Trypsin 48mg and Bromelain 90mg and Rutoside 100mg Tablets",
+    "salts": [
+      "trypsin",
+      "bromelain",
+      "rutoside"
+    ],
+    "strength": "48mg+90mg+100mg",
+    "form": "tablet",
+    "unit": "10's",
+    "mrp": 35,
+    "group": "Analgesic/Antipyretic/Anti-Inflammatory"
+  },
+  {
+    "code": "509",
+    "generic_name": "Chlorpheniramine 2mg and Dextromethorphan 10mg Syrup",
+    "salts": [
+      "chlorpheniramine",
+      "dextromethorphan"
+    ],
+    "strength": "2mg+10mg",
+    "form": "syrup",
+    "unit": "100ml",
+    "mrp": 26,
+    "group": "Cold/Cough"
+  },
+  {
+    "code": "510",
+    "generic_name": "Paracetamol 250mg and Phenylephrine 5mg and Cetirizine 2mg Suspension",
+    "salts": [
+      "paracetamol",
+      "phenylephrine",
+      "cetirizine"
+    ],
+    "strength": "250mg+5mg+2mg",
+    "form": "syrup",
+    "unit": "60ml",
+    "mrp": 28,
+    "group": "Cold/Cough"
+  },
+  {
+    "code": "511",
+    "generic_name": "Multivitamin and Mineral Syrup",
+    "salts": [
+      "multivitamin"
+    ],
+    "strength": "5ml",
+    "form": "syrup",
+    "unit": "200ml",
+    "mrp": 45,
+    "group": "Vitamin"
+  },
+  {
+    "code": "512",
+    "generic_name": "Iron Syrup 50mg/5ml",
+    "salts": [
+      "ferrous sulphate"
+    ],
+    "strength": "50mg/5ml",
+    "form": "syrup",
+    "unit": "200ml",
+    "mrp": 32,
+    "group": "Haematinic"
+  },
+  {
+    "code": "513",
+    "generic_name": "Oral Rehydration Salts Apple Flavour",
+    "salts": [
+      "ors"
+    ],
+    "strength": "21g",
+    "form": "powder",
+    "unit": "1 sachet",
+    "mrp": 3,
+    "group": "Electrolyte"
+  },
+  {
+    "code": "514",
+    "generic_name": "Povidone Iodine 10% Ointment",
+    "salts": [
+      "povidone iodine"
+    ],
+    "strength": "10%",
+    "form": "ointment",
+    "unit": "15g",
+    "mrp": 22,
+    "group": "Antiseptic"
+  },
+  {
+    "code": "515",
+    "generic_name": "Silver Sulfadiazine 1% Cream",
+    "salts": [
+      "silver sulfadiazine"
+    ],
+    "strength": "1%",
+    "form": "cream",
+    "unit": "20g",
+    "mrp": 28,
+    "group": "Dermatology"
+  },
+  {
+    "code": "516",
+    "generic_name": "Benzoyl Peroxide 2.5% Gel",
+    "salts": [
+      "benzoyl peroxide"
+    ],
+    "strength": "2.5%",
+    "form": "gel",
+    "unit": "20g",
+    "mrp": 30,
+    "group": "Dermatology"
+  },
+  {
+    "code": "517",
+    "generic_name": "Salicylic Acid 6% Ointment",
+    "salts": [
+      "salicylic acid"
+    ],
+    "strength": "6%",
+    "form": "ointment",
+    "unit": "15g",
+    "mrp": 16,
+    "group": "Dermatology"
+  },
+  {
+    "code": "518",
+    "generic_name": "Lignocaine 2% Jelly",
+    "salts": [
+      "lignocaine"
+    ],
+    "strength": "2%",
+    "form": "gel",
+    "unit": "20g",
+    "mrp": 18,
+    "group": "Local anaesthetic"
   }
 ]

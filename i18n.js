@@ -59,7 +59,7 @@ export const strings = {
     'result.disclaimer':
       'Information only. Ask your doctor or pharmacist before you change medicines.',
     'result.another': 'Check another medicine',
-    'result.source': 'Prices from the official Jan Aushadhi list ({date}).',
+    'result.source': 'Curated Jan Aushadhi snapshot ({date}). Confirm the MRP on the pack.',
     'nomatch.title': 'Not in our list yet',
     'nomatch.body': "We won't guess a price. Ask your pharmacist for the generic.",
     'nomatch.retry': 'Try another spelling',
