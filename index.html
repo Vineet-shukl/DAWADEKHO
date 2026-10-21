@@ -99,9 +99,10 @@
           <p class="hint" data-i18n="store.lead">We do not keep our own shop list.</p>
           <div class="confirm-actions">
             <a class="btn btn-primary" id="store-official" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="store.official">Open the official locator</a>
-            <button type="button" class="btn btn-secondary" id="store-map" data-i18n="store.map">Search the map near me</button>
+            <button type="button" class="btn btn-secondary" id="store-map" data-i18n="store.map">Show shops near me</button>
           </div>
-          <p class="hint" id="store-status" data-i18n="store.note">The official list asks for your state and district. Map pins are not checked by us.</p>
+          <ul class="store-list" id="store-list" hidden></ul>
+          <p class="hint" id="store-status" data-i18n="store.note">Distances are straight-line. Shops come from OpenStreetMap, not a complete official list.</p>
         </section>
 
         <section class="search-panel" id="search-panel">

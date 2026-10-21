@@ -19,6 +19,7 @@ const $ = (id) => document.getElementById(id);
 let matcher = null;
 let debounceTimer = null;
 let predictTimer = null;
+let autoShowTimer = null;
 let predictSeq = 0;
 let activeIndex = -1;
 let lastHits = [];
@@ -152,6 +153,14 @@ function renderSuggestions(query) {
     }
   }
   schedulePredict(query.trim(), items.map((item) => item.label));
+  clearTimeout(autoShowTimer);
+  const top = items[0];
+  if (top && query.trim().length >= 4 && (top.score ?? 1) <= 0.05) {
+    autoShowTimer = setTimeout(() => {
+      if ($('search-input').value.trim() !== query.trim()) return;
+      selectHit(top);
+    }, 700);
+  }
 }
 
 function schedulePredict(query, candidates) {
@@ -638,24 +647,51 @@ async function init() {
   $('store-official') && ($('store-official').href = CONFIG.KENDRA_URL);
   $('store-map')?.addEventListener('click', () => {
     const status = $('store-status');
-    const openMaps = (lat, lng) => {
-      const q = 'Jan Aushadhi Kendra';
-      const url = lat != null
-        ? `https://www.google.com/maps/search/${encodeURIComponent(q)}/@${lat},${lng},14z`
-        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
-      window.open(url, '_blank', 'noopener');
-      if (status) status.textContent = t('store.note');
-    };
+    const list = $('store-list');
     if (!navigator.geolocation) {
-      openMaps();
+      if (status) status.textContent = t('store.denied');
       return;
     }
     if (status) status.textContent = t('store.locating');
     navigator.geolocation.getCurrentPosition(
-      (pos) => openMaps(pos.coords.latitude.toFixed(5), pos.coords.longitude.toFixed(5)),
+      async (pos) => {
+        try {
+          const url = `${CONFIG.STORES_URL}?lat=${pos.coords.latitude.toFixed(5)}&lng=${pos.coords.longitude.toFixed(5)}`;
+          const res = await fetch(url, { signal: AbortSignal.timeout(14000) });
+          const data = await res.json();
+          const shops = data.shops || [];
+          if (!list) return;
+          list.innerHTML = '';
+          if (!shops.length) {
+            list.hidden = true;
+            if (status) status.textContent = t('store.empty');
+            return;
+          }
+          shops.forEach((shop) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = shop.maps;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'store-row';
+            const name = document.createElement('strong');
+            name.textContent = shop.name;
+            const meta = document.createElement('span');
+            meta.textContent = `${t('store.km', { km: shop.km })} · ${shop.address}`;
+            a.append(name, meta);
+            a.setAttribute('aria-label', `${t('store.open')}: ${shop.name}`);
+            li.appendChild(a);
+            list.appendChild(li);
+          });
+          list.hidden = false;
+          if (status) status.textContent = t('store.note');
+          motionIn([...list.querySelectorAll('a')], stagger(0.05));
+        } catch {
+          if (status) status.textContent = t('store.empty');
+        }
+      },
       () => {
         if (status) status.textContent = t('store.denied');
-        openMaps();
       },
       { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 }
     );
