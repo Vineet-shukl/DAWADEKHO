@@ -4,6 +4,9 @@
     "api/read-strip.js": {
       "maxDuration": 60,
       "memory": 1024
+    },
+    "api/stores.js": {
+      "maxDuration": 60
     }
   },
   "headers": [

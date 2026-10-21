@@ -53,6 +53,10 @@ function applyI18n() {
   if ($('receipt').hidden === false && $('save-label').dataset.amount) {
     refreshSaveLabel();
   }
+  const speakBtn = $('speak-btn');
+  if (speakBtn?.getAttribute('aria-pressed') === 'true') {
+    speakBtn.textContent = t('speak.stop');
+  }
 }
 
 function refreshSaveLabel() {
@@ -454,18 +458,57 @@ async function readStrip(file) {
   }
 }
 
+let preferredVoice = null;
+
+function voiceFor(lang) {
+  const voices = window.speechSynthesis.getVoices();
+  const prefix = lang.slice(0, 2).toLowerCase();
+  return voices.find((v) => (v.lang || '').toLowerCase().startsWith(prefix)) || null;
+}
+
+function rememberVoices() {
+  preferredVoice = voiceFor(getLang() === 'hi' ? 'hi-IN' : 'en-IN');
+}
+
+function resultSpeechText() {
+  const name = $('receipt-title')?.textContent?.trim();
+  const price = $('receipt-generic')?.textContent?.trim();
+  const parts = [];
+  if (name) parts.push(name);
+  parts.push(`${t('result.generic')} ${price || ''}`.trim());
+  const band = document.querySelector('.save-band');
+  const saving = $('save-sr')?.textContent?.trim();
+  if (saving && band && !band.hidden) parts.push(saving);
+  parts.push(t('result.disclaimer'));
+  return parts.filter(Boolean).join('. ');
+}
+
+function setSpeakButton(speaking) {
+  const btn = $('speak-btn');
+  if (!btn) return;
+  btn.textContent = speaking ? t('speak.stop') : t('speak.button');
+  btn.setAttribute('aria-pressed', speaking ? 'true' : 'false');
+}
+
 function speakResult() {
   if (!('speechSynthesis' in window)) return;
-  window.speechSynthesis.cancel();
-  const text = [$('save-sr').textContent, $('receipt-title').textContent, t('result.disclaimer')]
-    .filter(Boolean)
-    .join('. ');
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = getLang() === 'hi' ? 'hi-IN' : 'en-IN';
-  const voices = window.speechSynthesis.getVoices();
-  const preferred = voices.find((v) => v.lang.startsWith(u.lang.slice(0, 2)));
-  if (preferred) u.voice = preferred;
-  window.speechSynthesis.speak(u);
+  const synth = window.speechSynthesis;
+  const btn = $('speak-btn');
+  if (btn?.getAttribute('aria-pressed') === 'true') {
+    synth.cancel();
+    setSpeakButton(false);
+    return;
+  }
+  if (synth.paused) synth.resume();
+  const lang = getLang() === 'hi' ? 'hi-IN' : 'en-IN';
+  const u = new SpeechSynthesisUtterance(resultSpeechText());
+  u.lang = lang;
+  const voice = preferredVoice || voiceFor(lang);
+  if (voice) u.voice = voice;
+  u.onend = () => setSpeakButton(false);
+  u.onerror = () => setSpeakButton(false);
+  setSpeakButton(true);
+  synth.speak(u);
 }
 
 async function normaliseVoiceText(utterance) {
@@ -683,7 +726,7 @@ async function init() {
       async (pos) => {
         try {
           const url = `${CONFIG.STORES_URL}?lat=${pos.coords.latitude.toFixed(5)}&lng=${pos.coords.longitude.toFixed(5)}`;
-          const res = await fetch(url, { signal: AbortSignal.timeout(14000) });
+          const res = await fetch(url, { signal: AbortSignal.timeout(45000) });
           const data = await res.json();
           const shops = data.shops || [];
           if (!list) return;
@@ -695,23 +738,43 @@ async function init() {
           }
           shops.forEach((shop) => {
             const li = document.createElement('li');
+            li.className = 'store-row';
             const a = document.createElement('a');
             a.href = shop.maps;
             a.target = '_blank';
             a.rel = 'noopener noreferrer';
-            a.className = 'store-row';
+            a.className = 'store-map';
             const name = document.createElement('strong');
             name.textContent = shop.name;
             const meta = document.createElement('span');
-            meta.textContent = `${t('store.km', { km: shop.km })} · ${shop.address}`;
+            const bits = [];
+            if (shop.km != null && shop.km !== '') bits.push(t('store.km', { km: shop.km }));
+            if (shop.address) bits.push(shop.address);
+            meta.textContent = bits.join(' · ');
             a.append(name, meta);
             a.setAttribute('aria-label', `${t('store.open')}: ${shop.name}`);
             li.appendChild(a);
+            if (shop.phone) {
+              const phone = document.createElement('a');
+              const dial = String(shop.phone).split(/[/,\s]+/).find(Boolean) || shop.phone;
+              phone.href = `tel:${String(dial).replace(/[^\d+]/g, '')}`;
+              phone.className = 'store-phone';
+              phone.textContent = shop.phone;
+              phone.setAttribute('aria-label', `${t('store.call')}: ${shop.phone}`);
+              li.appendChild(phone);
+            }
+            const hours = document.createElement('span');
+            hours.className = 'store-hours';
+            hours.textContent = t('store.hours');
+            const days = document.createElement('span');
+            days.className = 'store-days';
+            days.textContent = shop.days ? t('store.days', { days: shop.days }) : t('store.daysMissing');
+            li.append(hours, days);
             list.appendChild(li);
           });
           list.hidden = false;
           if (status) status.textContent = t('store.note');
-          motionIn([...list.querySelectorAll('a')], stagger(0.05));
+          motionIn([...list.querySelectorAll('.store-row')], stagger(0.05));
         } catch {
           if (status) status.textContent = t('store.empty');
         }
@@ -725,7 +788,8 @@ async function init() {
   $('speak-btn')?.addEventListener('click', speakResult);
   $('voice-btn')?.addEventListener('click', startVoiceSearch);
   if ('speechSynthesis' in window) {
-    window.speechSynthesis.getVoices();
+    window.speechSynthesis.addEventListener('voiceschanged', rememberVoices);
+    rememberVoices();
   }
 }
 
