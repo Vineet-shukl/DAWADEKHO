@@ -59,10 +59,15 @@ export const strings = {
     'share.text':
       '{brand} costs {branded}. Jan Aushadhi {generic} costs {price}. Check with your pharmacist. — via DawaDekho',
     'speak.button': 'Read aloud',
+    'voice.button': 'Speak medicine name',
+    'voice.listening': 'Listening… speak now',
+    'voice.working': 'Checking what you said with Gemma…',
+    'photo.verifying': 'Gemma is double-checking the strip…',
     'a11y.skip': 'Skip to main content',
     'a11y.camera': 'Open camera to photograph medicine strip',
     'a11y.loading': 'Loading, please wait',
     'a11y.resultReady': 'Result ready',
+    'a11y.voice': 'Speak a medicine name',
     'meta.title': 'DawaDekho — Find cheaper Jan Aushadhi generic medicines',
     'meta.description':
       'Photograph or type your medicine. See the Jan Aushadhi generic with the same salt and strength, and how much you save. Free, no login.',
@@ -129,10 +134,15 @@ export const strings = {
     'share.text':
       '{brand} का दाम {branded}। जन औषधि {generic} का दाम {price}। फ़ार्मासिस्ट से पूछें। — DawaDekho',
     'speak.button': 'सुनें',
+    'voice.button': 'दवा का नाम बोलें',
+    'voice.listening': 'सुन रहे हैं… अब बोलें',
+    'voice.working': 'Gemma से जाँच हो रही है…',
+    'photo.verifying': 'Gemma पत्ते को दोबारा जाँच रहा है…',
     'a11y.skip': 'मुख्य भाग पर जाएँ',
     'a11y.camera': 'दवा के पत्ते की फ़ोटो के लिए कैमरा खोलें',
     'a11y.loading': 'लोड हो रहा है, कृपया रुकें',
     'a11y.resultReady': 'नतीजा तैयार है',
+    'a11y.voice': 'दवा का नाम बोलें',
     'meta.title': 'दवा देखो — सस्ती जन औषधि जेनेरिक दवा खोजें',
     'meta.description':
       'दवा की फ़ोटो लें या नाम लिखें। उसी सॉल्ट और ताकत की जन औषधि दवा और अपनी बचत देखें। मुफ़्त, बिना लॉगिन।',

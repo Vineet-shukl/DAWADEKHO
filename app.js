@@ -233,7 +233,7 @@ async function readStrip(file) {
     return;
   }
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 15000);
+  const timer = setTimeout(() => ctrl.abort(), 50000);
   try {
     const res = await fetch(CONFIG.API_URL, {
       method: 'POST',
@@ -260,6 +260,91 @@ async function readStrip(file) {
     showError(e.name === 'AbortError' ? 'err.timeout' : 'err.generic');
     showSearch();
   }
+}
+
+function speakResult() {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  const text = [$('save-sr').textContent, $('receipt-title').textContent, t('result.disclaimer')]
+    .filter(Boolean)
+    .join('. ');
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = getLang() === 'hi' ? 'hi-IN' : 'en-IN';
+  const voices = window.speechSynthesis.getVoices();
+  const preferred = voices.find((v) => v.lang.startsWith(u.lang.slice(0, 2)));
+  if (preferred) u.voice = preferred;
+  window.speechSynthesis.speak(u);
+}
+
+async function normaliseVoiceText(utterance) {
+  if (!CONFIG.API_URL || !navigator.onLine) {
+    runQuery(utterance);
+    return;
+  }
+  const status = $('voice-status');
+  status.hidden = false;
+  status.textContent = t('voice.working');
+  hideResults();
+  $('loading').hidden = false;
+  $('loading-title').textContent = t('voice.working');
+  try {
+    const res = await fetch(CONFIG.API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ voice_text: utterance }),
+      signal: AbortSignal.timeout(45000),
+    });
+    $('loading').hidden = true;
+    if (!res.ok) {
+      status.textContent = '';
+      status.hidden = true;
+      runQuery(utterance);
+      return;
+    }
+    const data = await res.json();
+    const q = data.brand_query || utterance;
+    status.textContent = q;
+    runQuery(q);
+  } catch {
+    $('loading').hidden = true;
+    status.hidden = true;
+    runQuery(utterance);
+  }
+}
+
+function startVoiceSearch() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) {
+    showError('err.generic');
+    return;
+  }
+  showSearch();
+  const rec = new SR();
+  rec.lang = getLang() === 'hi' ? 'hi-IN' : 'en-IN';
+  rec.interimResults = false;
+  rec.maxAlternatives = 1;
+  const btn = $('voice-btn');
+  const status = $('voice-status');
+  status.hidden = false;
+  status.textContent = t('voice.listening');
+  btn.classList.add('is-listening');
+  rec.onresult = (e) => {
+    const said = e.results?.[0]?.[0]?.transcript?.trim();
+    btn.classList.remove('is-listening');
+    if (!said) {
+      status.hidden = true;
+      return;
+    }
+    $('search-input').value = said;
+    $('search-clear').hidden = false;
+    normaliseVoiceText(said);
+  };
+  rec.onerror = () => {
+    btn.classList.remove('is-listening');
+    status.hidden = true;
+  };
+  rec.onend = () => btn.classList.remove('is-listening');
+  rec.start();
 }
 
 function confirmLookup() {
@@ -384,6 +469,11 @@ async function init() {
     input.value = '';
     showSearch();
   });
+  $('speak-btn')?.addEventListener('click', speakResult);
+  $('voice-btn')?.addEventListener('click', startVoiceSearch);
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.getVoices();
+  }
 }
 
 init().catch(() => showError('err.generic'));

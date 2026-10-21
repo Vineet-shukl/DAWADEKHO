@@ -1,6 +1,6 @@
 # DawaDekho — Design System
 
-**Direction: "the honest receipt."** Warm paper, dark ink, prices set like a pharmacy bill. Green means money saved, saffron means look here. The look is calm and trustworthy, never clinical blue and never a startup gradient.
+**Direction: "neobrutalist orange."** Hackfest energy — thick black borders, hard offset shadows, bold type, orange (`#FF5A1F`) as the base. Cream paper (`#FFF4E8`) behind. Savings sit on an orange slab, not soft green. Still honest about prices; never clinical blue.
 
 Built for: a first-time user, 18–75, on a small Android phone, reading Hindi or English, possibly in bright sunlight.
 
@@ -20,19 +20,17 @@ Define once on `:root`. Every component uses tokens only, never hex values.
 
 | Token | Light | Dark | Use |
 |---|---|---|---|
-| `--paper` | `#FBF8F1` | `#151A18` | Page background |
-| `--card` | `#FFFFFF` | `#1E2523` | Cards, inputs |
-| `--ink` | `#1B2B27` | `#EEF2EF` | Primary text |
-| `--ink-muted` | `#55625D` | `#A9B5B0` | Secondary text, labels |
-| `--line` | `#E2DCCD` | `#33403C` | Borders, dividers, receipt dashes |
-| `--save` | `#0B6E46` | `#4CC28D` | Savings figure, primary button |
-| `--save-ink` | `#FFFFFF` | `#0B1F17` | Text on `--save` |
-| `--save-soft` | `#E3F3EA` | `#173327` | Savings banner background |
-| `--saffron` | `#E8772E` | `#F0954F` | Accent stripe, highlights, never body text |
-| `--saffron-soft` | `#FDEBDD` | `#3A2716` | "Approx price" tag, notices |
-| `--warn-ink` | `#8A4B00` | `#FFC27A` | Warning text on `--saffron-soft` |
-| `--danger` | `#B3261E` | `#FF8A80` | Errors |
-| `--focus` | `#1F5FD1` | `#8AB4FF` | Focus ring (3 px) |
+| `--paper` | `#FFF4E8` | `#1A120C` | Page background |
+| `--card` | `#FFFFFF` | `#24180F` | Cards, inputs |
+| `--ink` | `#111111` | `#FFF4E8` | Primary text |
+| `--ink-muted` | `#3D3D3D` | `#E0C4B0` | Secondary text, labels |
+| `--line` | `#111111` | `#FF5A1F` | Thick borders (neobrutal) |
+| `--orange` | `#FF5A1F` | `#FF5A1F` | Base brand / CTAs / save band |
+| `--save` | `#111111` / orange slab | `#FF5A1F` | Primary actions |
+| `--save-ink` | `#FFFFFF` / `#111` | `#111111` | Text on primary |
+| `--saffron-soft` | `#FFE8B0` | `#3A2218` | Disclaimer / approx tags |
+| `--danger` | `#C1121F` | `#FF6B6B` | Errors |
+| `--shadow` | `4px 4px 0 #111` | `4px 4px 0 #FF5A1F` | Hard offset shadow |
 
 **Contrast (WCAG AA, computed):**
 

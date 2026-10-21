@@ -8,5 +8,5 @@ packages:
         runtime: nodejs:18
         web: true
         limits:
-          timeout: 20000
+          timeout: 55000
           memory: 256

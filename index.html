@@ -9,8 +9,8 @@
   <link rel="alternate" hreflang="en" href="https://REPLACE.ondigitalocean.app/?lang=en">
   <link rel="alternate" hreflang="hi" href="https://REPLACE.ondigitalocean.app/?lang=hi">
   <link rel="alternate" hreflang="x-default" href="https://REPLACE.ondigitalocean.app/">
-  <meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#151A18" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FF5A1F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1A120C" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="DawaDekho — See the medicine. See the price.">
   <meta property="og:description" content="Find the Jan Aushadhi generic for your medicine and see your saving.">
@@ -88,9 +88,11 @@
             <input id="search-input" type="search" autocomplete="off" spellcheck="false"
               role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list"
               data-i18n-placeholder="search.placeholder" placeholder="e.g. Dolo 650">
+            <button type="button" class="icon-btn" id="voice-btn" data-i18n-aria="a11y.voice" aria-label="Speak a medicine name" title="Voice">🎙</button>
             <button type="button" class="icon-btn" id="search-clear" hidden data-i18n-aria="search.clear.aria" aria-label="Clear search">×</button>
           </div>
           <p class="hint" data-i18n="search.hint">Spelling mistakes are okay.</p>
+          <p class="hint" id="voice-status" hidden></p>
           <ul class="suggestions" id="suggestions" role="listbox" hidden></ul>
         </section>
 
@@ -129,7 +131,8 @@
 
       <section class="result-panel" id="result-panel" aria-live="polite">
         <div class="loading-box" id="loading" hidden>
-          <p data-i18n="photo.reading">Reading the strip…</p>
+          <p id="loading-title" data-i18n="photo.reading">Reading the strip…</p>
+          <p class="verify-note" id="loading-verify" data-i18n="photo.verifying">Gemma is double-checking the strip…</p>
           <p class="hint" data-i18n="a11y.loading">Loading, please wait</p>
         </div>
         <div class="error-box" id="error-box" hidden>
@@ -164,6 +167,7 @@
           <div class="link-stack">
             <a class="btn btn-primary" id="kendra-link" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="result.kendra">Find nearest Jan Aushadhi Kendra</a>
             <a class="btn btn-ghost" id="sugam-link" href="https://play.google.com/store/apps/details?id=com.janaushadhi.sugam" target="_blank" rel="noopener noreferrer" data-i18n="result.app">Get the official Janaushadhi Sugam app</a>
+            <button type="button" class="btn btn-ghost" id="speak-btn" data-i18n="speak.button">Read aloud</button>
             <button type="button" class="btn btn-secondary" id="another" data-i18n="result.another">Check another medicine</button>
           </div>
           <p class="meta-line" id="receipt-source"></p>

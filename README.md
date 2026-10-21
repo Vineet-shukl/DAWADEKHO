@@ -34,8 +34,11 @@ All **facts** (salts, strengths, prices) come from shipped JSON. Gemma’s outpu
 | Gemma 4 **may** | Gemma 4 **must never** |
 |---|---|
 | Read **printed** text on a strip or box | Invent a drug name, salt, price, or alternative |
-| Return structured `{brand, salts, strength, mrp_printed}` | Give dosage, side-effect, or medical advice |
-| Return null / `readable: false` when unsure | Fill gaps with guesses |
+| **Re-check its own JSON** up to 3 passes (extract → verify → refine) | Give dosage, side-effect, or medical advice |
+| Normalise messy **voice/typed** utterances into a search string | Fill gaps with guesses |
+| Return null / `readable: false` when unsure | Skip the confirm step |
+
+**Voice:** Mic uses the browser speech recogniser; Gemma then cleans the transcript (multi-pass). Read-aloud uses the browser speech engine (Hindi/English). Hosted Gemma on the Gemini API does not expose native audio ASR yet — we keep Gemma for vision + text verification.
 
 **Fails on:** handwriting, blurry photos, glare, unusual packs, rate limits. Typed search always works offline after first load. Confirm step lets the user fix any field before lookup.
 
