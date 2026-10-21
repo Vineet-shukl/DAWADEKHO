@@ -901,7 +901,7 @@ main {
 /* White page, dark text. White type only on the dark rust buttons. */
 html,
 body {
-  background: #ffffff;
+  background: #f5f5f7;
   color: #1c1917;
 }
 .hero-title,
