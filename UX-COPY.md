@@ -8,6 +8,7 @@
 - Numbers: always `₹` plus Indian grouping (₹1,240). Percent rounded to a whole number.
 - Never say "cure", "best", "guaranteed", "same as" or "safe to switch".
 - Each error says **what happened** and **what to do next**.
+- CTAs start with a verb and name the outcome.
 - Keys below map to `i18n.js` (`en` / `hi`).
 
 ---
@@ -19,21 +20,21 @@
 | `app.name` | DawaDekho | दवा देखो |
 | `app.tagline` | See the medicine. See the price. Before you pay. | दवा देखो, दाम देखो — पैसे देने से पहले। |
 | `lang.toggle.aria` | Change language | भाषा बदलें |
-| `offline.banner` | You're offline. Typed search still works. | इंटरनेट नहीं है। नाम लिखकर खोज अब भी चलेगी। |
+| `offline.banner` | You're offline. You can still type a medicine name. | इंटरनेट नहीं है। दवा का नाम लिखकर खोज अभी भी चलेगी। |
 
 ## 2. Home
 
 | Key | English | हिंदी |
 |---|---|---|
 | `home.title` | Is there a cheaper version of your medicine? | क्या आपकी दवा सस्ते में मिल सकती है? |
-| `home.lead` | Find the Jan Aushadhi generic with the same salt and strength. | उसी सॉल्ट और ताकत वाली जन औषधि दवा खोजें। |
-| `home.step1` | 1. Photo or name | 1. फ़ोटो या नाम |
+| `home.lead` | Find the Jan Aushadhi generic with the matching salt and strength. | उसी सॉल्ट और ताकत वाली जन औषधि दवा खोजें। |
+| `home.step1` | 1. Photo, voice, or name | 1. फ़ोटो, आवाज़ या नाम |
 | `home.step2` | 2. Check the details | 2. जानकारी जाँचें |
 | `home.step3` | 3. See how much you save | 3. देखें कितनी बचत होगी |
-| `home.cta.photo` | Photo of strip | पत्ते की फ़ोटो लें |
-| `home.cta.type` | Type medicine name | दवा का नाम लिखें |
-| `home.examples` | Try: | आज़माएँ: |
-| `home.privacy` | No login. Photos are not saved. | लॉगिन नहीं चाहिए। फ़ोटो सेव नहीं होती। |
+| `home.cta.photo` | Photograph the strip | पत्ते की फ़ोटो लें |
+| `home.cta.type` | Type the medicine name | दवा का नाम लिखें |
+| `home.examples` | Try one: | एक आज़माएँ: |
+| `home.privacy` | No login. We don't keep your photos. | लॉगिन नहीं। आपकी फ़ोटो सेव नहीं होती। |
 
 ## 3. Search
 
@@ -41,7 +42,7 @@
 |---|---|---|
 | `search.label` | Medicine name | दवा का नाम |
 | `search.placeholder` | e.g. Dolo 650 | जैसे Dolo 650 |
-| `search.hint` | Spelling mistakes are okay. | स्पेलिंग गलत हो तो भी चलेगा। |
+| `search.hint` | Typos are fine — we'll still try to match. | स्पेलिंग थोड़ी गलत हो तो भी ठीक है। |
 | `search.clear.aria` | Clear search | खोज साफ़ करें |
 | `search.results.aria` | {n} matches | {n} नतीजे |
 
@@ -51,15 +52,16 @@
 |---|---|---|
 | `photo.tip` | Show the printed side. Keep it flat and well lit. | छपा हुआ हिस्सा दिखाएँ। पत्ता सीधा और रोशनी में रखें। |
 | `photo.reading` | Reading the strip… | पत्ता पढ़ा जा रहा है… |
-| `photo.needsNet` | Photo reading needs internet. | फ़ोटो पढ़ने के लिए इंटरनेट चाहिए। |
-| `confirm.title` | Is this right? | क्या यह सही है? |
-| `confirm.lead` | Fix anything that looks wrong. | कुछ गलत लगे तो ठीक कर दें। |
+| `photo.verifying` | Double-checking the print so we don't guess… | छपाई दोबारा जाँच रहे हैं — अंदाज़ा नहीं लगाएँगे… |
+| `photo.needsNet` | Photo reading needs internet. Type the name instead. | फ़ोटो के लिए इंटरनेट चाहिए। नाम लिखकर खोजें। |
+| `confirm.title` | Does this look right? | क्या यह सही दिख रहा है? |
+| `confirm.lead` | Edit any field that looks wrong, then continue. | जो गलत लगे उसे ठीक करें, फिर आगे बढ़ें। |
 | `confirm.brand` | Brand name | ब्रांड का नाम |
-| `confirm.salt` | Salt (medicine inside) | सॉल्ट (अंदर की दवा) |
+| `confirm.salt` | Salt (what's inside) | सॉल्ट (अंदर की दवा) |
 | `confirm.strength` | Strength | ताकत |
-| `confirm.mrp` | MRP printed on strip | पत्ते पर छपा MRP |
-| `confirm.cta` | Show cheaper option | सस्ता विकल्प दिखाएँ |
-| `confirm.retake` | Take photo again | फिर से फ़ोटो लें |
+| `confirm.mrp` | MRP printed on the strip | पत्ते पर छपा MRP |
+| `confirm.cta` | See your saving | बचत देखें |
+| `confirm.retake` | Retake photo | फिर से फ़ोटो लें |
 
 ## 5. Result
 
@@ -69,13 +71,13 @@
 | `result.generic` | Jan Aushadhi price | जन औषधि दाम |
 | `result.save` | You save {amount} ({pct}%) | आपकी बचत {amount} ({pct}%) |
 | `result.save.sr` | You save {rupees} rupees, {pct} percent | आपकी बचत {rupees} रुपये, {pct} प्रतिशत |
-| `result.approx` | Approx — check MRP on your strip | अनुमानित — अपने पत्ते पर MRP देखें |
+| `result.approx` | Approximate — check the MRP on your strip | अनुमानित — अपने पत्ते पर MRP देखें |
 | `result.pack` | Pack: {unit} | पैक: {unit} |
 | `result.code` | Drug code {code} | ड्रग कोड {code} |
-| `result.sameAs` | Same salt and strength as {brand} | {brand} जैसा ही सॉल्ट और ताकत |
-| `result.kendra` | Find nearest Jan Aushadhi Kendra | नज़दीकी जन औषधि केंद्र खोजें |
-| `result.app` | Get the official Janaushadhi Sugam app | सरकारी जनऔषधि सुगम ऐप लें |
-| `result.disclaimer` | Information only. Confirm with your doctor or pharmacist before switching. | सिर्फ़ जानकारी के लिए। दवा बदलने से पहले डॉक्टर या फ़ार्मासिस्ट से पूछें। |
+| `result.sameAs` | Salt and strength match {brand} | {brand} से सॉल्ट और ताकत मिलते हैं |
+| `result.kendra` | Find a nearby Jan Aushadhi Kendra | नज़दीकी जन औषधि केंद्र खोजें |
+| `result.app` | Open the official Janaushadhi Sugam app | सरकारी जनऔषधि सुगम ऐप खोलें |
+| `result.disclaimer` | Information only. Ask your doctor or pharmacist before you change medicines. | सिर्फ़ जानकारी। दवा बदलने से पहले डॉक्टर या फ़ार्मासिस्ट से पूछें। |
 | `result.another` | Check another medicine | दूसरी दवा देखें |
 | `result.source` | Prices from the official Jan Aushadhi list ({date}). | दाम सरकारी जन औषधि सूची से ({date})। |
 
@@ -84,16 +86,27 @@
 | Key | English | हिंदी |
 |---|---|---|
 | `nomatch.title` | Not in our list yet | यह दवा अभी हमारी सूची में नहीं है |
-| `nomatch.body` | We won't guess. Ask your pharmacist for the generic. | हम अंदाज़ा नहीं लगाते। फ़ार्मासिस्ट से जेनेरिक दवा पूछें। |
+| `nomatch.body` | We won't guess a price. Ask your pharmacist for the generic. | हम दाम का अंदाज़ा नहीं लगाते। फ़ार्मासिस्ट से जेनेरिक पूछें। |
 | `nomatch.retry` | Try another spelling | दूसरी स्पेलिंग आज़माएँ |
-| `err.unreadable` | We couldn't read the strip clearly. Try a sharper photo, or type the name. | पत्ता साफ़ नहीं पढ़ा गया। साफ़ फ़ोटो लें या नाम लिखें। |
-| `err.busy` | Photo reading is busy right now. Type the name instead. | अभी फ़ोटो पढ़ना व्यस्त है। नाम लिखकर खोजें। |
+| `err.unreadable` | We couldn't read that strip. Try a sharper photo, or type the name. | पत्ता साफ़ नहीं पढ़ा। साफ़ फ़ोटो लें या नाम लिखें। |
+| `err.busy` | Photo reading is busy. Type the name for now. | फ़ोटो पढ़ना व्यस्त है। अभी नाम लिखकर खोजें। |
 | `err.timeout` | That took too long. Type the name instead. | बहुत देर लगी। नाम लिखकर खोजें। |
-| `err.tooBig` | Photo is too large. Try again. | फ़ोटो बहुत बड़ी है। फिर कोशिश करें। |
+| `err.tooBig` | That photo is too large. Take another one. | फ़ोटो बहुत बड़ी है। नई फ़ोटो लें। |
 | `err.generic` | Something went wrong. Please try again. | कुछ गड़बड़ हुई। फिर कोशिश करें। |
-| `err.handwriting` | We read printed strips and boxes, not handwriting. | हम छपे पत्ते और डिब्बे पढ़ते हैं, हाथ की लिखावट नहीं। |
+| `err.handwriting` | We read printed strips and boxes — not handwriting. | हम छपे पत्ते और डिब्बे पढ़ते हैं, लिखावट नहीं। |
+| `err.voice` | We couldn't catch that. Tap the mic and try again, or type the name. | सुनाई नहीं दी। माइक दबाकर फिर बोलें, या नाम लिखें। |
 
-## 7. Should-have features
+## 7. Voice and speak
+
+| Key | English | हिंदी |
+|---|---|---|
+| `speak.button` | Hear the result | नतीजा सुनें |
+| `voice.button` | Speak the medicine name | दवा का नाम बोलें |
+| `voice.listening` | Listening… say the brand and strength | सुन रहे हैं… ब्रांड और ताकत बोलें |
+| `voice.working` | Checking what you said… | जो आपने कहा, जाँच हो रही है… |
+| `a11y.voice` | Speak a medicine name | दवा का नाम बोलें |
+
+## 8. Should-have features
 
 | Key | English | हिंदी |
 |---|---|---|
@@ -101,9 +114,8 @@
 | `list.total` | Total saving on {n} medicines: {amount} | {n} दवाओं पर कुल बचत: {amount} |
 | `share.whatsapp` | Send on WhatsApp | व्हाट्सऐप पर भेजें |
 | `share.text` | {brand} costs {branded}. Jan Aushadhi {generic} costs {price}. Check with your pharmacist. — via DawaDekho | {brand} का दाम {branded}। जन औषधि {generic} का दाम {price}। फ़ार्मासिस्ट से पूछें। — DawaDekho |
-| `speak.button` | Read aloud | सुनें |
 
-## 8. Accessibility labels
+## 9. Accessibility labels
 
 | Key | English | हिंदी |
 |---|---|---|
@@ -112,9 +124,9 @@
 | `a11y.loading` | Loading, please wait | लोड हो रहा है, कृपया रुकें |
 | `a11y.resultReady` | Result ready | नतीजा तैयार है |
 
-## 9. Meta (SEO)
+## 10. Meta (SEO)
 
 | Key | English | हिंदी |
 |---|---|---|
 | `meta.title` | DawaDekho — Find cheaper Jan Aushadhi generic medicines | दवा देखो — सस्ती जन औषधि जेनेरिक दवा खोजें |
-| `meta.description` | Photograph or type your medicine. See the Jan Aushadhi generic with the same salt and strength, and how much you save. Free, no login. | दवा की फ़ोटो लें या नाम लिखें। उसी सॉल्ट और ताकत की जन औषधि दवा और अपनी बचत देखें। मुफ़्त, बिना लॉगिन। |
+| `meta.description` | Photograph, speak, or type your medicine. See the Jan Aushadhi generic with matching salt and strength, and how much you save. Free, no login. | दवा की फ़ोटो लें, बोलें या नाम लिखें। मिलते सॉल्ट और ताकत की जन औषधि दवा और बचत देखें। मुफ़्त, बिना लॉगिन। |

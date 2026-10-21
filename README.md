@@ -4,7 +4,7 @@
 
 Free, open-source web app for Hackfest Lucknow PS3 — *The Prescription You Cannot Read*. Type a brand (or photograph a **printed** strip) and see the Jan Aushadhi generic with the same salt and strength, with the saving as the headline: **₹240 → ₹28**.
 
-**Live URL:** *(set after DigitalOcean deploy)* `https://REPLACE.ondigitalocean.app/`
+**Live URL:** *(Vercel)* — see latest production deploy after `vercel --prod`.
 
 ---
 
@@ -15,16 +15,16 @@ Patients pay branded MRP at the counter because they don’t know the molecule o
 ## How it works
 
 ```
-Browser (static site, DigitalOcean App Platform)
+Browser (static site on Vercel)
  ├─ index.html · style.css · app.js · i18n.js
  ├─ match.js  ── Fuse.js fuzzy search over bundled JSON
  ├─ data/jan_aushadhi.json · data/brands.json
- └─ photo ──► POST /api/read-strip
+ └─ photo / voice ──► POST /api/read-strip
                  │
-     DigitalOcean Function (Node 18)
+     Vercel Serverless Function (Node)
                  │  env: GEMINI_API_KEY (never in the browser)
                  ▼
-     Gemini API → gemma-4-26b-a4b-it (image → search keys only)
+     Gemini API → gemma-4-26b-a4b-it (multi-pass verify → search keys only)
 ```
 
 All **facts** (salts, strengths, prices) come from shipped JSON. Gemma’s output is only a **search key**.
@@ -61,19 +61,17 @@ npx --yes serve -l 8080 .
 
 Open `http://localhost:8080`. Typed search works without an API key. Photo needs `CONFIG.API_URL` in `config.js` pointing at a deployed Function.
 
-## Deploy to DigitalOcean (free)
+## Deploy to Vercel
 
-1. **Function:** install `doctl`, then:
-   ```bash
-   doctl serverless install
-   doctl serverless connect
-   cd functions
-   GEMINI_API_KEY=... ALLOWED_ORIGIN=https://YOUR_APP.ondigitalocean.app doctl serverless deploy .
-   doctl sls fn get api/read-strip --url
-   ```
-2. Put that URL in `config.js` → `API_URL`.
-3. **Static site:** App Platform → create from this GitHub repo → Static Site → build empty, output `/`.
-4. Replace `REPLACE.ondigitalocean.app` in `index.html`, `robots.txt`, `sitemap.xml`, `llms.txt`, and README.
+```bash
+npx vercel link
+npx vercel env add GEMINI_API_KEY production
+npx vercel --prod
+```
+
+- API route: `/api/read-strip` (see `api/read-strip.js`, `maxDuration: 60`).
+- Local photo/voice: `npm run api` on `:8787` while `npx serve -l 8080`.
+- After deploy, set canonical URLs in `index.html`, `robots.txt`, `sitemap.xml`, and `llms.txt` to your `*.vercel.app` (or custom) domain.
 
 ## Tests
 
@@ -85,7 +83,7 @@ npm run validate         # data integrity
 ## Credits
 
 - **Gemma 4** (open-weights multimodal) via **Gemini API**
-- **DigitalOcean** App Platform + Functions
+- **Vercel** (static hosting + serverless `/api/read-strip`)
 - **Fuse.js** fuzzy search
 - **Google Fonts** — Mukta, IBM Plex Mono
 - **PMBI / Jan Aushadhi** public product list (curated snapshot)

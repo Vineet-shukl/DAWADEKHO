@@ -315,7 +315,7 @@ async function normaliseVoiceText(utterance) {
 function startVoiceSearch() {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) {
-    showError('err.generic');
+    showError('err.voice');
     return;
   }
   showSearch();
@@ -342,6 +342,7 @@ function startVoiceSearch() {
   rec.onerror = () => {
     btn.classList.remove('is-listening');
     status.hidden = true;
+    showError('err.voice');
   };
   rec.onend = () => btn.classList.remove('is-listening');
   rec.start();

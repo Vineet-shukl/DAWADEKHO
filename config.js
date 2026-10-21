@@ -1,5 +1,5 @@
-/** Production Function URL after DigitalOcean deploy. Localhost uses the local API. */
-const PROD_API_URL = '';
+/** Production uses same-origin Vercel function. Localhost uses local API. */
+const PROD_API_URL = '/api/read-strip';
 const LOCAL_API_URL = 'http://localhost:8787';
 
 function resolveApiUrl() {
