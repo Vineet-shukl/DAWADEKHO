@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>DawaDekho — Find cheaper Jan Aushadhi generic medicines</title>
+  <meta name="description" content="Photograph or type your medicine. See the Jan Aushadhi generic with the same salt and strength, and how much you save. Free, no login.">
+  <link rel="canonical" href="https://REPLACE.ondigitalocean.app/">
+  <link rel="alternate" hreflang="en" href="https://REPLACE.ondigitalocean.app/?lang=en">
+  <link rel="alternate" hreflang="hi" href="https://REPLACE.ondigitalocean.app/?lang=hi">
+  <link rel="alternate" hreflang="x-default" href="https://REPLACE.ondigitalocean.app/">
+  <meta name="theme-color" content="#FBF8F1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151A18" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DawaDekho — See the medicine. See the price.">
+  <meta property="og:description" content="Find the Jan Aushadhi generic for your medicine and see your saving.">
+  <meta property="og:image" content="https://REPLACE.ondigitalocean.app/og.png">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:locale:alternate" content="hi_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DawaDekho",
+    "alternateName": "दवा देखो",
+    "url": "https://REPLACE.ondigitalocean.app/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any (web browser)",
+    "inLanguage": ["en-IN", "hi-IN"],
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "Find the Jan Aushadhi generic medicine with the same salt and strength as a branded medicine and see the price difference. Information only.",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/Vineet-shukl/DAWADEKHO"
+  }
+  </script>
+</head>
+<body>
+  <div class="stripe" aria-hidden="true"></div>
+  <a class="skip" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+  <div class="offline" id="offline" role="status" data-i18n="offline.banner">You're offline. Typed search still works.</div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="./" data-i18n="app.name">DawaDekho</a>
+      <div class="lang-toggle" role="group" data-i18n-aria="lang.toggle.aria" aria-label="Change language">
+        <button type="button" id="lang-en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-hi" aria-pressed="false">हिं</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div class="layout">
+      <section class="wrap-content" aria-labelledby="home-title">
+        <h1 id="home-title" class="hero-title" data-i18n="home.title">Is there a cheaper version of your medicine?</h1>
+        <p class="lead" data-i18n="home.lead">Find the Jan Aushadhi generic with the same salt and strength.</p>
+        <ol class="steps">
+          <li data-i18n="home.step1">1. Photo or name</li>
+          <li data-i18n="home.step2">2. Check the details</li>
+          <li data-i18n="home.step3">3. See how much you save</li>
+        </ol>
+
+        <div class="cta-stack" id="cta-stack">
+          <button type="button" class="btn btn-primary" id="cta-photo" data-i18n="home.cta.photo">Photo of strip</button>
+          <button type="button" class="btn btn-secondary" id="cta-type" data-i18n="home.cta.type">Type medicine name</button>
+        </div>
+        <p class="privacy" data-i18n="home.privacy">No login. Photos are not saved.</p>
+
+        <div class="examples" id="examples">
+          <span class="examples-label" data-i18n="home.examples">Try:</span>
+          <button type="button" class="chip" data-q="Dolo 650">Dolo 650</button>
+          <button type="button" class="chip" data-q="Pan 40">Pan 40</button>
+          <button type="button" class="chip" data-q="Crocin">Crocin</button>
+        </div>
+
+        <section class="search-panel" id="search-panel" hidden>
+          <label class="search-label" for="search-input" data-i18n="search.label">Medicine name</label>
+          <div class="search-row">
+            <span aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" autocomplete="off" spellcheck="false"
+              role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list"
+              data-i18n-placeholder="search.placeholder" placeholder="e.g. Dolo 650">
+            <button type="button" class="icon-btn" id="search-clear" hidden data-i18n-aria="search.clear.aria" aria-label="Clear search">×</button>
+          </div>
+          <p class="hint" data-i18n="search.hint">Spelling mistakes are okay.</p>
+          <ul class="suggestions" id="suggestions" role="listbox" hidden></ul>
+        </section>
+
+        <section class="photo-panel" id="photo-panel" hidden>
+          <p class="photo-tip" data-i18n="photo.tip">Show the printed side. Keep it flat and well lit.</p>
+          <input class="file-input" id="photo-input" type="file" accept="image/*" capture="environment"
+            data-i18n-aria="a11y.camera" aria-label="Open camera to photograph medicine strip">
+          <button type="button" class="btn btn-primary" id="photo-pick" data-i18n="home.cta.photo">Photo of strip</button>
+        </section>
+
+        <section class="confirm-card" id="confirm-card" hidden>
+          <h2 data-i18n="confirm.title">Is this right?</h2>
+          <p class="hint" data-i18n="confirm.lead">Fix anything that looks wrong.</p>
+          <div class="field">
+            <label for="confirm-brand" data-i18n="confirm.brand">Brand name</label>
+            <input id="confirm-brand" type="text">
+          </div>
+          <div class="field">
+            <label for="confirm-salt" data-i18n="confirm.salt">Salt (medicine inside)</label>
+            <input id="confirm-salt" type="text">
+          </div>
+          <div class="field">
+            <label for="confirm-strength" data-i18n="confirm.strength">Strength</label>
+            <input id="confirm-strength" type="text">
+          </div>
+          <div class="field">
+            <label for="confirm-mrp" data-i18n="confirm.mrp">MRP printed on strip</label>
+            <input id="confirm-mrp" type="number" inputmode="decimal" min="0" step="0.01">
+          </div>
+          <div class="confirm-actions">
+            <button type="button" class="btn btn-primary" id="confirm-go" data-i18n="confirm.cta">Show cheaper option</button>
+            <button type="button" class="btn btn-ghost" id="confirm-retake" data-i18n="confirm.retake">Take photo again</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="result-panel" id="result-panel" aria-live="polite">
+        <div class="loading-box" id="loading" hidden>
+          <p data-i18n="photo.reading">Reading the strip…</p>
+          <p class="hint" data-i18n="a11y.loading">Loading, please wait</p>
+        </div>
+        <div class="error-box" id="error-box" hidden>
+          <p id="error-text"></p>
+          <button type="button" class="btn btn-secondary" id="error-type" data-i18n="home.cta.type">Type medicine name</button>
+        </div>
+        <div class="nomatch" id="nomatch" hidden>
+          <h2 data-i18n="nomatch.title">Not in our list yet</h2>
+          <p data-i18n="nomatch.body">We won't guess. Ask your pharmacist for the generic.</p>
+          <button type="button" class="btn btn-secondary" id="nomatch-retry" data-i18n="nomatch.retry">Try another spelling</button>
+        </div>
+        <article class="receipt" id="receipt" hidden>
+          <h2 class="receipt-head" id="receipt-title"></h2>
+          <div class="receipt-row">
+            <span data-i18n="result.branded">Branded MRP</span>
+            <span class="price" id="receipt-branded"></span>
+          </div>
+          <div id="approx-tag" class="approx" hidden data-i18n="result.approx">Approx — check MRP on your strip</div>
+          <div class="receipt-row">
+            <span data-i18n="result.generic">Jan Aushadhi price</span>
+            <span class="price" id="receipt-generic"></span>
+          </div>
+          <div class="save-band">
+            <span class="save-label" id="save-label"></span>
+            <span class="hero-save price" id="save-amount" aria-hidden="true"></span>
+            <span class="visually-hidden" id="save-sr"></span>
+          </div>
+          <p class="meta-line" id="receipt-same"></p>
+          <p class="meta-line" id="receipt-pack"></p>
+          <p class="meta-line code" id="receipt-code"></p>
+          <p class="disclaimer" data-i18n="result.disclaimer">Information only. Confirm with your doctor or pharmacist before switching.</p>
+          <div class="link-stack">
+            <a class="btn btn-primary" id="kendra-link" href="https://janaushadhi.gov.in/KendraDetails.aspx" target="_blank" rel="noopener noreferrer" data-i18n="result.kendra">Find nearest Jan Aushadhi Kendra</a>
+            <a class="btn btn-ghost" id="sugam-link" href="https://play.google.com/store/apps/details?id=com.janaushadhi.sugam" target="_blank" rel="noopener noreferrer" data-i18n="result.app">Get the official Janaushadhi Sugam app</a>
+            <button type="button" class="btn btn-secondary" id="another" data-i18n="result.another">Check another medicine</button>
+          </div>
+          <p class="meta-line" id="receipt-source"></p>
+        </article>
+      </section>
+    </div>
+
+    <p class="about" data-i18n="about.data">About the data: prices come from a curated snapshot of the official Jan Aushadhi (PMBI) product list dated 2026-10-21. We never invent salts or prices.</p>
+  </main>
+
+  <div class="sticky-bar" id="sticky-bar">
+    <button type="button" class="btn btn-primary" id="sticky-photo" data-i18n="home.cta.photo">Photo of strip</button>
+    <button type="button" class="btn btn-secondary" id="sticky-type" data-i18n="home.cta.type">Type medicine name</button>
+  </div>
+
+  <noscript>
+    <p>Typed search needs JavaScript. You can still use the Janaushadhi Sugam app.</p>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7/dist/fuse.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
