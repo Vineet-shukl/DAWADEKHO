@@ -1,6 +1,18 @@
 import { CONFIG } from './config.js';
 import { createMatcher, savings } from './match.js';
 import { getLang, setLang, t } from './i18n.js';
+import { animate, stagger } from 'https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm';
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function motionIn(target, delay = 0) {
+  if (reduceMotion || !target) return;
+  animate(
+    target,
+    { opacity: [0, 1], y: [14, 0] },
+    { duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }
+  );
+}
 
 const $ = (id) => document.getElementById(id);
 
@@ -107,6 +119,7 @@ function paintSuggestions(items) {
   list.hidden = lastHits.length === 0;
   $('search-input').setAttribute('aria-expanded', String(!list.hidden));
   list.setAttribute('aria-label', t('search.results.aria', { n: lastHits.length }));
+  if (!list.hidden) motionIn([...list.querySelectorAll('button')], stagger(0.04));
 }
 
 function hitsFromQuery(query) {
@@ -232,6 +245,8 @@ function showResult(match, { stripMrp = null, approx = true } = {}) {
   $('receipt').hidden = false;
   $('receipt').setAttribute('aria-label', t('a11y.resultReady'));
   setMascot('happy');
+  motionIn($('receipt'));
+  motionIn($('save-amount'), 0.08);
 }
 
 function runQuery(q) {

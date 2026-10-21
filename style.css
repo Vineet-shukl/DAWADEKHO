@@ -1,12 +1,12 @@
 /* Soft paper · warm coral · sage savings */
 :root {
-  --paper: #fff8f4;
-  --paper-2: #ffe8dc;
+  --paper: #ffffff;
+  --paper-2: #fff7f2;
   --card: #ffffff;
-  --ink: #2c2420;
-  --ink-muted: #6b5e56;
-  --line: #f0ddd2;
-  --orange: #e86a3a;
+  --ink: #1c1917;
+  --ink-muted: #44403c;
+  --line: #e7e5e4;
+  --orange: #9a3412;
   --orange-deep: #c8532a;
   --orange-soft: #ffe4d6;
   --save: #1f7a4d;
@@ -43,7 +43,7 @@
   --border: 1px solid var(--line);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (min-width: 100000px) {
   :root:not([data-theme="light"]) {
     --paper: #1c1410;
     --paper-2: #2a1c16;
@@ -704,11 +704,12 @@ input:focus-visible {
   box-shadow: var(--shadow);
   border: var(--border);
 }
-.btn-primary { background: var(--orange); color: #fff; }
+.btn-primary { background: #9a3412; color: #ffffff; }
+.btn-primary:hover { background: #7c2d12; }
 .btn-secondary, .chip, .lang-toggle, .search-row, .field input { background: var(--card); color: var(--ink); }
 .btn:active { transform: scale(0.98); box-shadow: var(--shadow); }
 .chip { border-radius: var(--r-sm); }
-.lang-toggle button[aria-pressed="true"] { background: var(--orange); color: #fff; }
+.lang-toggle button[aria-pressed="true"] { background: #9a3412; color: #ffffff; }
 .save-band { background: var(--save-soft); }
 .save-band .hero-save, .save-band .save-label { color: var(--save); }
 .sticky-bar { background: color-mix(in srgb, var(--paper) 92%, white); }
@@ -755,4 +756,32 @@ input:focus-visible {
 @keyframes rise {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
+}
+
+/* White page, dark text. White type only on the dark rust buttons. */
+html,
+body {
+  background: #ffffff;
+  color: #1c1917;
+}
+.hero-title,
+.logo,
+.search-label,
+.receipt-head,
+.confirm-card h2,
+.nomatch h2,
+.steps li,
+.btn-secondary,
+.chip,
+.field label,
+.receipt-row {
+  color: #1c1917;
+}
+.lead,
+.hint,
+.privacy,
+.meta-line,
+.photo-tip,
+.examples-label {
+  color: #44403c;
 }
